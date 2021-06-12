@@ -1,7 +1,9 @@
 import 'package:ffccv2_app/constants/colors.dart';
 import 'package:ffccv2_app/constants/strings.dart';
+import 'package:ffccv2_app/features/FFCC/presentation/widgets/custom_bottomsheet.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:get/get.dart';
 
 class TeachersPage extends StatefulWidget {
   static const String teachersPage = 'teachersPage';
@@ -10,6 +12,13 @@ class TeachersPage extends StatefulWidget {
 }
 
 class _TeachersPageState extends State<TeachersPage> {
+  TextEditingController controller;
+  @override
+  void initState() {
+    controller = TextEditingController();
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
@@ -86,6 +95,7 @@ class _TeachersPageState extends State<TeachersPage> {
                       width: 200,
                       child: Card(
                         child: TextFormField(
+                          controller: controller,
                           decoration: InputDecoration(
                             focusedBorder: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(12.0),
@@ -111,6 +121,9 @@ class _TeachersPageState extends State<TeachersPage> {
                     child: MaterialButton(
                       color: KColor.primaryColor,
                       onPressed: () {
+                        controller.value.text.isNotEmpty
+                            ? showSubjectBottomSheet()
+                            : null;
                         // Get.toNamed(TeachersPage.teachersPage);
                       },
                       child: Text(
@@ -129,5 +142,14 @@ class _TeachersPageState extends State<TeachersPage> {
         ),
       ),
     );
+  }
+
+  showSubjectBottomSheet() {
+    Get.bottomSheet(
+        CustomBottomSheet(
+          controller: controller,
+          title: 'TEACHERS NAME',
+        ),
+        backgroundColor: Colors.white);
   }
 }

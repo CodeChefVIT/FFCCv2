@@ -1,6 +1,6 @@
 import 'package:ffccv2_app/constants/colors.dart';
 import 'package:ffccv2_app/constants/strings.dart';
-import 'package:ffccv2_app/features/FFCC/presentation/pages/teachers_page.dart';
+import 'package:ffccv2_app/features/FFCC/presentation/widgets/custom_bottomsheet.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
@@ -12,6 +12,13 @@ class SubjectPage extends StatefulWidget {
 }
 
 class _SubjectPageState extends State<SubjectPage> {
+  TextEditingController controller;
+  @override
+  void initState() {
+    controller = TextEditingController();
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
@@ -88,6 +95,7 @@ class _SubjectPageState extends State<SubjectPage> {
                       width: 200,
                       child: Card(
                         child: TextFormField(
+                          controller: controller,
                           decoration: InputDecoration(
                             focusedBorder: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(12.0),
@@ -113,7 +121,10 @@ class _SubjectPageState extends State<SubjectPage> {
                     child: MaterialButton(
                       color: KColor.primaryColor,
                       onPressed: () {
-                        Get.toNamed(TeachersPage.teachersPage);
+                        controller.value.text.isNotEmpty
+                            ? showSubjectBottomSheet()
+                            : null;
+//Get.toNamed(TeachersPage.teachersPage);
                       },
                       child: Text(
                         'Enter',
@@ -131,5 +142,14 @@ class _SubjectPageState extends State<SubjectPage> {
         ),
       ),
     );
+  }
+
+  showSubjectBottomSheet() {
+    Get.bottomSheet(
+        CustomBottomSheet(
+          controller: controller,
+          title: 'SUBJECTS CODE',
+        ),
+        backgroundColor: Colors.white);
   }
 }

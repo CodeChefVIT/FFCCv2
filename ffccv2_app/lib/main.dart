@@ -3,6 +3,7 @@ import 'package:ffccv2_app/features/FFCC/presentation/pages/get_started_page.dar
 import 'package:ffccv2_app/features/FFCC/presentation/pages/splash_screen.dart';
 import 'package:ffccv2_app/features/FFCC/presentation/pages/subjects_page.dart';
 import 'package:ffccv2_app/features/FFCC/presentation/pages/teachers_page.dart';
+import 'package:ffccv2_app/features/FFCC/presentation/pages/time_table_page.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:get/get.dart';
@@ -22,6 +23,7 @@ class MyApp extends StatelessWidget {
             name: GetStartedPage.getStartedPage, page: () => GetStartedPage()),
         GetPage(name: SubjectPage.subjectsPage, page: () => SubjectPage()),
         GetPage(name: TeachersPage.teachersPage, page: () => TeachersPage()),
+        GetPage(name: TimeTablePage.timetablePage, page: () => TimeTablePage()),
       ],
       theme: ThemeData(
           textTheme: GoogleFonts.dmSansTextTheme(

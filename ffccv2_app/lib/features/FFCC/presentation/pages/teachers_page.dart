@@ -1,12 +1,13 @@
 import 'package:ffccv2_app/constants/colors.dart';
 import 'package:ffccv2_app/constants/strings.dart';
-import 'package:ffccv2_app/features/FFCC/presentation/pages/time_table_page.dart';
+import 'package:ffccv2_app/features/FFCC/presentation/pages/facluty_review_search.dart';
+import 'package:ffccv2_app/features/FFCC/presentation/pages/faculty_review_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 
 class TeachersPage extends StatefulWidget {
-  static const String teachersPage = '/teachersPage';
+  static const String routeName = '/teachersPage';
   @override
   _TeachersPageState createState() => _TeachersPageState();
 }
@@ -103,7 +104,8 @@ class _TeachersPageState extends State<TeachersPage> {
                       child: MaterialButton(
                         color: KColor.primaryColor,
                         onPressed: () {
-                          Get.toNamed(TimeTablePage.timetablePage);
+                          //Get.toNamed(TimeTablePage.routeName);
+                          Get.toNamed(FacultyReviewPage.routeName);
                           if (_formKey.currentState.validate()) {
                             _formKey.currentState.save();
                           }

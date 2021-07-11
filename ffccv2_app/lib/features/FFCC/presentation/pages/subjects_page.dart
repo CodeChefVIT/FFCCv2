@@ -6,7 +6,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 
 class SubjectPage extends StatefulWidget {
-  static const String subjectsPage = '/subjectsPage';
+  static const String routeName = '/subjectsPage';
   @override
   _SubjectPageState createState() => _SubjectPageState();
 }
@@ -116,7 +116,7 @@ class _SubjectPageState extends State<SubjectPage> {
                           color: KColor.primaryColor,
                           onPressed: () {
                             print(friendsList);
-                            Get.toNamed(TeachersPage.teachersPage);
+                            Get.toNamed(TeachersPage.routeName);
                             if (_formKey.currentState.validate()) {
                               _formKey.currentState.save();
                             }

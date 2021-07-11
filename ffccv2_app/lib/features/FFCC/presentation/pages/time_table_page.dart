@@ -2,7 +2,7 @@ import 'package:ffccv2_app/features/FFCC/presentation/widgets/timeTable_widgets.
 import 'package:flutter/material.dart';
 
 class TimeTablePage extends StatefulWidget {
-  static const String timetablePage = '/timetablePage';
+  static const String routeName = '/timetablePage';
   TimeTablePage({Key key}) : super(key: key);
 
   @override

@@ -7,7 +7,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 
 class GetStartedPage extends StatefulWidget {
-  static const String getStartedPage = 'getStartedPage';
+  static const String routeName = 'getStartedPage';
   @override
   _GetStartedPageState createState() => _GetStartedPageState();
 }
@@ -84,7 +84,7 @@ class _GetStartedPageState extends State<GetStartedPage> {
                   ),
                   ElevatedButton(
                     onPressed: () {
-                      Get.toNamed(SubjectPage.subjectsPage);
+                      Get.toNamed(SubjectPage.routeName);
                     },
                     child: Text('GET STARTED'),
                   )

@@ -31,3 +31,8 @@ function checkSlide(e){
 }
 window.addEventListener("scroll", debounce(checkSlide));
 
+// //Redirect to Login Page
+// const redirect = document.getElementById("loginredirect");
+// redirect.addEventListener("click",()=>{
+//     location.href = './login.html';
+// });

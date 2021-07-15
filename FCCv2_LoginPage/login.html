@@ -7,6 +7,7 @@
     <script src="https://kit.fontawesome.com/07a0f5ab63.js" crossorigin="anonymous"></script>
     <title>LoginPage || FFCC</title>
     <link rel="stylesheet" href="./stylelogin.css">
+    <link rel="stylesheet" href="./LoginResponsive.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -16,32 +17,34 @@
 
             <form action="#" class="sign-in-form">
               <h2 class="title">Sign in</h2>
+              <ul id="form-messages">
+
+              </ul>
               <div class="input-field">
-                <i class="fas fa-user"></i>
-                <input type="text" placeholder="Username" required />
+                <i class="fas fa-envelope"></i>
+                <input type="email" id="signin-email" placeholder="Email" required />
               </div>
               <div class="input-field">
                 <i class="fas fa-lock"></i>
-                <input type="password" placeholder="Password" required/>
+                <input type="password" id="signin-password" placeholder="Password" required/>
               </div>
-              <input type="submit" value="Login" class="btn solid" />
+              <input type="submit" id="signin-btn-submit" value="Login" class="btn solid" />
             </form>
 
             <form action="#" class="sign-up-form">
                 <h2 class="title">Sign up</h2>
-                <div class="input-field">
-                  <i class="fas fa-user"></i>
-                  <input type="text" placeholder="Username" required />
-                </div>
+                <ul id="form-messages1">
+
+                </ul>
                 <div class="input-field">
                   <i class="fas fa-envelope"></i>
-                  <input type="email" placeholder="Email" required/>
+                  <input type="email" id="signup-email" placeholder="Email" required/>
                 </div>
                 <div class="input-field">
                   <i class="fas fa-lock"></i>
-                  <input type="password" placeholder="Password" required/>
+                  <input type="password" id="signup-password" placeholder="Password" required/>
                 </div>
-                <input type="submit" class="btn" value="Sign up" />
+                <input type="submit" id="signup-btn-submit" class="btn" value="Sign up" />
               </form>
            </div>
         </div>

@@ -1,0 +1,293 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+:root{
+    --primary-color:#122CEC;
+    --secondary-color:#909EFF;
+}
+/*Home*/
+#home{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+#home::before{
+    content:"";
+    background: -webkit-linear-gradient(45deg,whitesmoke,var(--secondary-color));
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+#home h1{
+    padding: 10px 120px;
+}
+.homepage{
+    width: 100%;
+    height: 100%;
+}
+.home_text{
+    float: right;
+    padding: 30px 175px 0px 0px ;
+    margin: 5px 5px;
+}
+.home_title{
+    float: left;
+}
+.home_text p{
+    font-size: 1.6rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 10px;
+    color: var(--primary-color);
+    padding: 4px;
+}
+/* Course-Container */
+/* #course-container{
+    margin: 100px auto;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.course{
+    border: 2px solid red;
+    width: 70%;
+    height: 500px;
+    padding: 0px 0px;
+    margin: 20px auto;
+}
+.course-title{
+    padding: 25px 5px;
+    background: var(--secondary-color);
+    color: black;
+    border-bottom: 1px solid transparent;
+    text-align: center;
+    width:100%;
+    height: 80px;
+}
+.course-search{
+    border: 2px solid black;
+    margin: 5px 5px;
+    padding: 5px 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: left;
+}
+.coursecode{
+    margin:10px 150px 10px 20px;
+}
+
+.coursename{
+    margin:10px 80px 10px 70px;
+}
+.coursecredit{
+    margin:10px 10px 10px 120px;
+}
+.course-search form {
+ width: 100%;
+ height: 390px;
+ display: flex;
+}
+.course-search label {
+    cursor: text;
+    color: var(--primary-color);
+    font-size: 1.15rem;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    text-transform: capitalize;
+}
+.course-search input{
+    width: 140%;
+    padding: 0.3rem;
+    border-bottom: 1px solid #D8D8D8;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.14);
+    border-width: 0px 0px 2px 0px;
+    background-color: whitesmoke;
+    outline: none;
+}
+.coursebuttons{
+   display: inline;
+   margin: 250px 0px 10px -110px ;
+   padding: 45px;
+}
+.course-search button{
+    display: block;
+    background-color:#D0D4F9;
+    font-size: 0.9rem;
+    color: var(--primary-color);
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.2s ease-in;
+}*/
+
+/*AddCourse Section*/
+
+#addcourse h1{
+    color: tomato;
+    padding: 15px;
+    margin-top: 15px;
+    margin-bottom: 30px;
+    text-shadow:0 0 1px rgb(219, 54, 25);
+    text-align: left;
+    font-size: 3rem;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+}
+.courses label{
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 10px;
+    padding: 10px;
+    color:#909EFF ;
+}
+input {
+    width: 100%;
+    padding: 15px;
+}
+.search-form {
+    max-width: 400px;
+    margin: 50px auto;
+}
+input#Courses {
+    margin: 0;
+    text-align: center;
+    outline: 0;
+    border: 10px solid #F7F7F7;
+    width: 120%;
+    left: -10%;
+    position: relative; 
+    top: 10px;
+    z-index: 2;
+    border-radius: 5px;
+    font-size: 25px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.12), inset 0 0 2px rgba(0, 0, 0, 0.19);
+}
+.suggestions {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    /*perspective: 20px;*/
+}
+  
+.suggestions li {
+    background: white;
+    list-style: none;
+    border-bottom: 1px solid #D8D8D8;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.14);
+    margin: 0;
+    padding: 20px;
+    transition: background 0.2s;
+    display: flex;
+    justify-content: space-between;
+    text-transform: capitalize;
+    font-size: 1.1rem;
+}
+  
+/*CREATING THOSE CURVES IN THE SUGGESTIONS */
+  
+.suggestions li:nth-child(even) {
+    transform: perspective(100px) rotateX(3deg) translateY(2px) scale(1.001);
+    background: linear-gradient(to bottom,  #ffffff 0%,#EFEFEF 100%);
+}
+  
+/*CREATING THOSE CURVES IN THE SUGGESTIONS */
+  
+.suggestions li:nth-child(odd) {
+    transform: perspective(100px) rotateX(-3deg) translateY(3px);
+    background: linear-gradient(to top,  #ffffff 0%,#EFEFEF 100%);
+}
+
+/* TIMETABLE Section */
+
+#Timetable h1{
+    color: tomato;
+    padding: 15px;
+    margin-top: 15px;
+    margin-bottom: 30px;
+    text-shadow:0 0 1px rgb(219, 54, 25);
+    text-align: left;
+    font-size: 3rem;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+
+/* Utility Class */
+.h-1{
+    font-size: 4rem;
+    color: var(--primary-color);
+    font-family: 'Epilogue', sans-serif;
+    font-weight: bold;
+   
+}
+.h-2{
+    font-size: 4rem;
+    color: var(--secondary-color);
+    font-family: 'Epilogue', sans-serif;
+    font-weight: bold;
+    
+}
+.btn{
+    display: block;
+    padding: 10px 30px;
+    margin: 30px 0px 0px 100px;
+    background-color:black;
+    box-shadow: 5px 5px 8px gray;
+    color: whitesmoke;
+    border-radius: 20px;
+    outline: none;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.2s ease-in;
+}
+.btn:hover{
+    background-color:var(--secondary-color);
+    color:black;
+    outline: none;
+}
+.btn a{
+    text-decoration: none;
+    color: azure;
+    font-size: 1rem;
+    outline: none;
+}
+.CC{
+    float: right;
+    padding: 5px 170px 0px 0px;
+    margin: 15px 5px 0px 0px;
+}
+.btn1{
+    padding: 5px 11px;
+    margin: 5px 0px;
+}
+.btn2{
+    padding: 5px 34px;
+    margin: 5px 0px;
+}
+/* SlideOnScroll CSS */
+.slide-in {                 /*Hides the image*/
+    opacity: 0;
+    transition: all .5s;
+}
+.align-left.slide-in {      /*Moves the image out of the screen*/
+    transform: translateX(-90%) scale(0.95);
+}
+.slide-in.active {          /*Makes the image visible and back to their original space*/
+    opacity: 1;
+    transform: translateX(0%) scale(1);
+}
+

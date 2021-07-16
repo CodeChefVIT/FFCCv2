@@ -1,7 +1,6 @@
 import 'package:ffccv2_app/constants/colors.dart';
 import 'package:ffccv2_app/constants/strings.dart';
-import 'package:ffccv2_app/features/FFCC/presentation/pages/facluty_review_search.dart';
-import 'package:ffccv2_app/features/FFCC/presentation/pages/faculty_review_page.dart';
+import 'package:ffccv2_app/features/FFCC/presentation/pages/time_table_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
@@ -105,7 +104,7 @@ class _TeachersPageState extends State<TeachersPage> {
                         color: KColor.primaryColor,
                         onPressed: () {
                           //Get.toNamed(TimeTablePage.routeName);
-                          Get.toNamed(FacultyReviewPage.routeName);
+                          Get.toNamed(TimeTablePage.routeName);
                           if (_formKey.currentState.validate()) {
                             _formKey.currentState.save();
                           }

@@ -2,6 +2,8 @@ import 'package:ffccv2_app/constants/colors.dart';
 import 'package:ffccv2_app/features/FFCC/presentation/pages/facluty_review_search.dart';
 import 'package:ffccv2_app/features/FFCC/presentation/pages/faculty_review_page.dart';
 import 'package:ffccv2_app/features/FFCC/presentation/pages/get_started_page.dart';
+import 'package:ffccv2_app/features/FFCC/presentation/pages/login_page.dart';
+import 'package:ffccv2_app/features/FFCC/presentation/pages/signup_page.dart';
 import 'package:ffccv2_app/features/FFCC/presentation/pages/splash_screen.dart';
 import 'package:ffccv2_app/features/FFCC/presentation/pages/subjects_page.dart';
 import 'package:ffccv2_app/features/FFCC/presentation/pages/teachers_page.dart';
@@ -30,6 +32,8 @@ class MyApp extends StatelessWidget {
             page: () => FacultyReviewSearchPage()),
         GetPage(
             name: FacultyReviewPage.routeName, page: () => FacultyReviewPage()),
+        GetPage(name: SignUpPage.routeName, page: () => SignUpPage()),
+        GetPage(name: LoginPage.routeName, page: () => LoginPage()),
       ],
       theme: ThemeData(
           textTheme: GoogleFonts.dmSansTextTheme(

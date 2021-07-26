@@ -1,22 +1,28 @@
 import 'package:ffccv2_app/constants/colors.dart';
 import 'package:ffccv2_app/constants/strings.dart';
-import 'package:ffccv2_app/features/FFCC/presentation/widgets/custom_bottomsheet.dart';
+import 'package:ffccv2_app/features/FFCC/presentation/pages/teachers_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 
 class SubjectPage extends StatefulWidget {
-  static const String subjectsPage = 'subjectsPage';
+  static const String routeName = '/subjectsPage';
   @override
   _SubjectPageState createState() => _SubjectPageState();
 }
 
 class _SubjectPageState extends State<SubjectPage> {
-  TextEditingController controller;
   @override
   void initState() {
-    controller = TextEditingController();
     super.initState();
+  }
+
+  final _formKey = GlobalKey<FormState>();
+  static List<String> friendsList = [null];
+
+  @override
+  void dispose() {
+    super.dispose();
   }
 
   @override
@@ -76,66 +82,57 @@ class _SubjectPageState extends State<SubjectPage> {
               ),
             ),
             Positioned(
-              top: size.height * .4,
+              top: size.height * .35,
               right: 1,
               left: 1,
-              child: Column(
-                children: [
-                  Text(
-                    'Enter number of subjects :',
-                    style: TextStyle(
-                        fontSize: 20,
-                        color: KColor.secondayColor,
-                        fontWeight: FontWeight.w600),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
-                    child: Container(
-                      height: 50,
-                      width: 200,
-                      child: Card(
-                        child: TextFormField(
-                          controller: controller,
-                          decoration: InputDecoration(
-                            focusedBorder: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(12.0),
-                              borderSide: BorderSide(
-                                color: Colors.white,
-                                width: 1.3,
-                              ),
-                            ),
-                            enabledBorder: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(12.0),
-                              borderSide: BorderSide(
-                                color: Colors.white,
-                                width: 1.3,
-                              ),
+              child: Form(
+                key: _formKey,
+                child: Column(
+                  children: [
+                    Text(
+                      'Enter subjects :',
+                      style: TextStyle(
+                          fontSize: 20,
+                          color: KColor.secondayColor,
+                          fontWeight: FontWeight.w600),
+                    ),
+                    Container(
+                      height: size.height * .5,
+                      child: ListView(
+                        children: [
+                          ..._getSubjects(),
+                        ],
+                      ),
+                    ),
+                    SizedBox(
+                      height: 25,
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Container(
+                        width: double.infinity,
+                        height: 50,
+                        child: MaterialButton(
+                          color: KColor.primaryColor,
+                          onPressed: () {
+                            print(friendsList);
+                            Get.toNamed(TeachersPage.routeName);
+                            if (_formKey.currentState.validate()) {
+                              _formKey.currentState.save();
+                            }
+                          },
+                          child: Text(
+                            'Next',
+                            style: TextStyle(
+                              fontSize: 18,
+                              color: Colors.white,
                             ),
                           ),
                         ),
                       ),
-                    ),
-                  ),
-                  Container(
-                    width: 80,
-                    child: MaterialButton(
-                      color: KColor.primaryColor,
-                      onPressed: () {
-                        controller.value.text.isNotEmpty
-                            ? showSubjectBottomSheet()
-                            : null;
-//Get.toNamed(TeachersPage.teachersPage);
-                      },
-                      child: Text(
-                        'Enter',
-                        style: TextStyle(
-                          fontSize: 16,
-                          color: Colors.white,
-                        ),
-                      ),
-                    ),
-                  )
-                ],
+                    )
+                  ],
+                ),
               ),
             )
           ],
@@ -144,12 +141,109 @@ class _SubjectPageState extends State<SubjectPage> {
     );
   }
 
-  showSubjectBottomSheet() {
-    Get.bottomSheet(
-        CustomBottomSheet(
-          controller: controller,
-          title: 'SUBJECTS CODE',
+  List<Widget> _getSubjects() {
+    List<Widget> friendsTextFields = [];
+    for (int i = 0; i < friendsList.length; i++) {
+      friendsTextFields.add(Padding(
+        padding: const EdgeInsets.symmetric(vertical: 16.0),
+        child: Row(
+          children: [
+            Expanded(child: SubjectsTextFields(i)),
+            SizedBox(
+              width: 16,
+            ),
+            _addRemoveButton(i == friendsList.length - 1, i),
+          ],
         ),
-        backgroundColor: Colors.white);
+      ));
+    }
+    return friendsTextFields;
+  }
+
+  Widget _addRemoveButton(bool add, int index) {
+    return Padding(
+      padding: const EdgeInsets.only(right: 8.0),
+      child: InkWell(
+        onTap: () {
+          if (add) {
+            friendsList.insert(0, null);
+          } else
+            friendsList.removeAt(index);
+          setState(() {});
+        },
+        child: Container(
+          width: 30,
+          height: 30,
+          decoration: BoxDecoration(
+            color: (add) ? KColor.primaryColor : Colors.red,
+            borderRadius: BorderRadius.circular(20),
+          ),
+          child: Icon(
+            (add) ? Icons.add : Icons.remove,
+            color: Colors.white,
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class SubjectsTextFields extends StatefulWidget {
+  final int index;
+  SubjectsTextFields(this.index);
+  @override
+  _SubjectsTextFieldsState createState() => _SubjectsTextFieldsState();
+}
+
+class _SubjectsTextFieldsState extends State<SubjectsTextFields> {
+  TextEditingController _nameController;
+
+  @override
+  void initState() {
+    super.initState();
+    _nameController = TextEditingController();
+  }
+
+  @override
+  void dispose() {
+    _nameController.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
+      _nameController.text = _SubjectPageState.friendsList[widget.index] ?? '';
+    });
+
+    return Padding(
+      padding: const EdgeInsets.fromLTRB(8, 4, 0, 4),
+      child: TextFormField(
+        controller: _nameController,
+        decoration: InputDecoration(
+          filled: true,
+          fillColor: Colors.white,
+          focusedBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(12.0),
+            borderSide: BorderSide(
+              color: Colors.white,
+              width: 1.3,
+            ),
+          ),
+          enabledBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(12.0),
+            borderSide: BorderSide(
+              color: Colors.white,
+              width: 1.3,
+            ),
+          ),
+        ),
+        onChanged: (v) => _SubjectPageState.friendsList[widget.index] = v,
+        validator: (v) {
+          if (v.trim().isEmpty) return 'Please enter something';
+          return null;
+        },
+      ),
+    );
   }
 }

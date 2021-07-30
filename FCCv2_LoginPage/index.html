@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fully Flexible Credit Companion</title>
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./StyleCourse.css">
     <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
 
@@ -89,13 +90,12 @@
 
        <div class="courseinput">
         <form class="search-form">
-
             <div class="courses">
                 <label for="Course1">Course 1:</label>
                 <div>
-                    <input type="text" name="Course1" id="Courses" placeholder="Search" autocomplete="off">
+                    <input type="text" name="Course1" class="CoursesBoy" id ="C1" placeholder="Search" autocomplete="off">
                 </div>
-                <ul class="suggestions">
+                <ul class="suggestions" id="S1">
                     <li>Filter Course Code</li>
                     <li>Course Name</li>
                 </ul>
@@ -104,9 +104,9 @@
             <div class="courses">
                 <label for="Course1">Course 2:</label>
                 <div>
-                    <input type="text" name="Course1" id="Courses" placeholder="Search" autocomplete="off">
+                    <input type="text" name="Course1" class="CoursesBoy" id ="C2" placeholder="Search" autocomplete="off">
                 </div>
-                <ul class="suggestions">
+                <ul class="suggestions" id="S2">
                     <li>Filter Course Code</li>
                     <li>Course Name</li>
                 </ul>
@@ -115,9 +115,9 @@
             <div class="courses">
                 <label for="Course1">Course 3:</label>
                 <div>
-                    <input type="text" name="Course1" id="Courses" placeholder="Search" autocomplete="off">
+                    <input type="text" name="Course1" class="CoursesBoy" id ="C3" placeholder="Search" autocomplete="off">
                 </div>
-                <ul class="suggestions">
+                <ul class="suggestions" id="S3">
                     <li>Filter Course Code</li>
                     <li>Course Name</li>
                 </ul>
@@ -126,9 +126,9 @@
             <div class="courses">
                 <label for="Course1">Course 4:</label>
                 <div>
-                    <input type="text" name="Course1" id="Courses" placeholder="Search" autocomplete="off">
+                    <input type="text" name="Course1" class="CoursesBoy" id ="C4" placeholder="Search" autocomplete="off">
                 </div>
-                <ul class="suggestions">
+                <ul class="suggestions" id="S4">
                     <li>Filter Course Code</li>
                     <li>Course Name</li>
                 </ul>
@@ -137,9 +137,9 @@
             <div class="courses">
                 <label for="Course1">Course 5:</label>
                 <div>
-                    <input type="text" name="Course1" id="Courses" placeholder="Search" autocomplete="off">
+                    <input type="text" name="Course1" class="CoursesBoy" id ="C5" placeholder="Search" autocomplete="off">
                 </div>
-                <ul class="suggestions">
+                <ul class="suggestions" id="S5">
                     <li>Filter Course Code</li>
                     <li>Course Name</li>
                 </ul>
@@ -148,15 +148,15 @@
             <div class="courses">
                 <label for="Course1">Course 6:</label>
                 <div>
-                    <input type="text" name="Course1" id="Courses" placeholder="Search" autocomplete="off">
+                    <input type="text" name="Course1" class="CoursesBoy" id ="C6" placeholder="Search" autocomplete="off">
                 </div>
-                <ul class="suggestions">
+                <ul class="suggestions" id="S6">
                     <li>Filter Course Code</li>
                     <li>Course Name</li>
                 </ul>
             </div>
             <br>
-            <button class="btn" id="loginredirect">Add Courses</button>
+            <button class="btn" id="addcoursebtn">Add Courses</button>
             <button class="btn" onclick="this.form.reset()">Clear</button>
         </form>
        </div>
@@ -167,7 +167,7 @@
         <h1 class="align-left slide-in">Timetable</h1>
     </div>
 
-    <div id="timetable">
+    <!-- <div id="timetable">
         <table class="table">
             <tr>
                 <td class="ColumnOneDays">THEORY <br/>HOURS</td>
@@ -249,16 +249,93 @@
                 </td>
             </tr>
             <tr>
-                
+                mon,tue,wed,thu,fri,sat,sun
             </tr>
-        </table>
-    </div>
+        </table> 
+    </div> -->
 
-    
+   </section>
+
+   <section id="courseadd">
+    <div class="heading">
+        <h1 class="align-left slide-in">Let Us Add some Courses</h1>
+    </div>
+    <div class="container">
+        <form action="#" method="POST">
+        <h2>Course 1</h2>
+        <div class="select-box">
+          <div class="options-container">
+            <!-- <select class="option" id="one">
+                
+            </select> -->
+            <div class="option">
+                <input type="radio" class="radio" id="film" name="category" value="film" />
+                <label for="Course 2">Course 1</label>
+              </div>
+            <div class="option">
+              <input type="radio" class="radio" id="film" name="category" value="film" />
+              <label for="Course 2">Course 2</label>
+            </div>
+            <div class="option">
+              <input type="radio" class="radio" id="science" name="category" value="science" />
+              <label for="Course 3">Course 3</label>
+            </div>
+            <div class="option">
+              <input type="radio" class="radio" id="art" name="category" value="art"/>
+              <label for="Course 4">Course 4</label>
+            </div>
+            <div class="option">
+              <input type="radio" class="radio" id="music" name="category" value="music"/>
+              <label for="Course 5">Course 5</label>
+            </div> 
+            
+          </div>
+          <div class="selected">
+            Select Courses
+          </div>
+          <div class="search-box">
+            <input type="text" placeholder="Search..." />
+          </div>
+        </div>
+
+        <h2>Course 2</h2>
+        <div class="select-box">
+          <div class="options-container">
+            <div class="option">
+              <input
+                type="radio"
+                class="radio"
+                id="youtube"
+                name="platform"
+                value="youtube"
+              />
+              <label for="youtube">YouTube</label>
+            </div>
+            <div class="option">
+              <input type="radio" class="radio" id="facebook" name="platform" value="facebook"/>
+              <label for="facebook">Facebook</label>
+            </div>
+            <div class="option">
+              <input type="radio" class="radio" id="vimeo" name="platform" value="vimeo" />
+              <label for="vimeo">Twitter</label>
+            </div>
+          </div>
+          <div class="selected">
+            Select Courses
+          </div>
+          <div class="search-box">
+            <input type="text" placeholder="Search..." />
+          </div>
+        </div>
+        <input type="submit" value="Add Course" class="btn123" />
+       
+        </form>
+      </div>
 
    </section>
 
 
     <script src="./MainJS.js"></script>
+    <script src="./course.js"></script>
 </body>
 </html>

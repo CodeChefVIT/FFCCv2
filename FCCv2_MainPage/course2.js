@@ -1,7 +1,7 @@
 let result2 = {};
 let allCourses2 = {};
 
-function filterCourses() {
+function filterCourses2() {
   var filter = document.getElementById("inputFilter2").value;
   result2.courses = allCourses2.courses.filter(x => x.title.toUpperCase().includes(filter.toUpperCase()))
   let select = document.getElementById("two");

@@ -1,0 +1,65 @@
+#courseadd h1{
+    color: tomato;
+    padding: 15px;
+    margin-top: 15px;
+    margin-bottom: 30px;
+    text-shadow:0 0 1px rgb(219, 54, 25);
+    text-align: left;
+    font-size: 3rem;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+}
+.option{
+    width:600px;
+    min-height: 45px;
+    background: #cbe7ff;
+    border-radius: 3px;
+    border: 2px solid #2196F3;
+    outline: none;
+}
+.container h2{
+    font-size: 2.3rem;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 10px;
+    padding: 10px;
+    color:#909EFF;
+}
+.select-box{
+    /* margin:0px; */
+    padding: 10px;
+}
+.options-container{
+    padding:5px 0px 0px 250px;
+    margin: 5px;
+}
+.selected{
+    font-size: 1.25rem;
+    font-weight: 600px;
+    font-family: 'Poppins', sans-serif;
+    color: #2196F3;
+    margin: 10px;
+    padding: 5px;
+}
+.search-box input{
+    width:600px;
+    margin-bottom:10px;
+    padding: 5px;
+    min-height: 35px;
+    border-radius: 5px;
+    border:2px solid #122CEC;
+    outline: none;
+}
+.btn123{
+    display: flex;
+    background-color:black;
+    box-shadow: 5px 5px 8px gray;
+    color: white;
+    font-weight: bold;
+    width: 175px;
+    border-radius: 20px;
+    text-align: center;
+    justify-content: center;
+    margin: auto;
+
+}

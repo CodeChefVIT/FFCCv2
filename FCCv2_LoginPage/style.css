@@ -161,7 +161,7 @@ input {
     max-width: 400px;
     margin: 50px auto;
 }
-input#Courses {
+input.CoursesBoy {
     margin: 0;
     text-align: center;
     outline: 0;
@@ -224,9 +224,10 @@ input#Courses {
     font-family: 'Poppins', sans-serif;
 }
 
-
-
 /* Utility Class */
+.hl {
+    background: #ffc600;
+}
 .h-1{
     font-size: 4rem;
     color: var(--primary-color);
@@ -271,7 +272,7 @@ input#Courses {
     margin: 15px 5px 0px 0px;
 }
 .btn1{
-    padding: 5px 11px;
+    padding: 13px 11px;
     margin: 5px 0px;
 }
 .btn2{

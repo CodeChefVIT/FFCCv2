@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fully Flexible Credit Companion</title>
     <link rel="stylesheet" href="./style.css">
+    <!-- <link rel="stylesheet" href="./StyleCourse.css"> -->
+    <link rel="stylesheet" href="./styleCourse2.css">
     <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
 
@@ -22,7 +24,7 @@
                <p>Same experience as FFCS</p>
                <p>Practice making your TimeTable</p>
                <button class="btn"><a href="#addcourse">Get Started</a></button>
-               <img src="../CodeChef-VIT_New_Logo_1.png" alt="" class="CC">
+               <img src="./CodeChef-VIT_New_Logo_1.png" alt="" class="CC">
            </div>
            <div class="home_title">
                <h1 class="h-1">
@@ -42,60 +44,19 @@
        
    </section>
 
-   <!-- <section id="course-container">
-       <div class="course">
-
-           <div class="course-title">
-            <h2>Add Courses To Your TimeTable</h2>
-           </div>
-
-           <div class="course-search">
-            <form action="#" class="forms">
-                <div class="coursecode">
-                    <label for="CourseCode">Course 1:</label>
-                    <div>
-                        <input type="text" name="CourseCode" id="CourseCode" placeholder="Search" autocomplete="off">
-                    </div>
-                    <ul class="suggestions">
-                        <li>Filter Course Code</li>
-                        <li>Course Name</li>
-                    </ul>
-                </div>
-                <div class="coursename">
-                    <label for="CourseName">Course Name:</label>
-                    <div>
-                        <input type="text" name="CourseName" id="CourseName" placeholder="Search" autocomplete="off">
-                    </div>
-                </div>
-                <div class="coursecredit">
-                    <label for="CourseCredit">Course Credits:</label>
-                    <div>
-                        <input type="number" name="CourseCredit" id="CourseCredit" placeholder="Search" autocomplete="off" max="4" min="0">
-                    </div>
-                </div>
-                <div class="coursebuttons">
-                    <button class="btn1">Add Course</button>
-                    <button class="btn2" onclick="this.form.reset()">Clear</button>
-                </div>
-            </form>
-           </div>
-       </div>
-   </section> -->
-
-   <section id= "addcourse">
+   <!-- <section id= "addcourse">
        <div class="heading">
            <h1 class="align-left slide-in">Let Us Add some Courses</h1>
        </div>
 
        <div class="courseinput">
         <form class="search-form">
-
             <div class="courses">
                 <label for="Course1">Course 1:</label>
                 <div>
-                    <input type="text" name="Course1" id="Courses" placeholder="Search" autocomplete="off">
+                    <input type="text" name="Course1" class="CoursesBoy" id ="C1" placeholder="Search" autocomplete="off">
                 </div>
-                <ul class="suggestions">
+                <ul class="suggestions" id="S1">
                     <li>Filter Course Code</li>
                     <li>Course Name</li>
                 </ul>
@@ -104,9 +65,9 @@
             <div class="courses">
                 <label for="Course1">Course 2:</label>
                 <div>
-                    <input type="text" name="Course1" id="Courses" placeholder="Search" autocomplete="off">
+                    <input type="text" name="Course1" class="CoursesBoy" id ="C2" placeholder="Search" autocomplete="off">
                 </div>
-                <ul class="suggestions">
+                <ul class="suggestions" id="S2">
                     <li>Filter Course Code</li>
                     <li>Course Name</li>
                 </ul>
@@ -115,9 +76,9 @@
             <div class="courses">
                 <label for="Course1">Course 3:</label>
                 <div>
-                    <input type="text" name="Course1" id="Courses" placeholder="Search" autocomplete="off">
+                    <input type="text" name="Course1" class="CoursesBoy" id ="C3" placeholder="Search" autocomplete="off">
                 </div>
-                <ul class="suggestions">
+                <ul class="suggestions" id="S3">
                     <li>Filter Course Code</li>
                     <li>Course Name</li>
                 </ul>
@@ -126,9 +87,9 @@
             <div class="courses">
                 <label for="Course1">Course 4:</label>
                 <div>
-                    <input type="text" name="Course1" id="Courses" placeholder="Search" autocomplete="off">
+                    <input type="text" name="Course1" class="CoursesBoy" id ="C4" placeholder="Search" autocomplete="off">
                 </div>
-                <ul class="suggestions">
+                <ul class="suggestions" id="S4">
                     <li>Filter Course Code</li>
                     <li>Course Name</li>
                 </ul>
@@ -137,9 +98,9 @@
             <div class="courses">
                 <label for="Course1">Course 5:</label>
                 <div>
-                    <input type="text" name="Course1" id="Courses" placeholder="Search" autocomplete="off">
+                    <input type="text" name="Course1" class="CoursesBoy" id ="C5" placeholder="Search" autocomplete="off">
                 </div>
-                <ul class="suggestions">
+                <ul class="suggestions" id="S5">
                     <li>Filter Course Code</li>
                     <li>Course Name</li>
                 </ul>
@@ -148,21 +109,265 @@
             <div class="courses">
                 <label for="Course1">Course 6:</label>
                 <div>
-                    <input type="text" name="Course1" id="Courses" placeholder="Search" autocomplete="off">
+                    <input type="text" name="Course1" class="CoursesBoy" id ="C6" placeholder="Search" autocomplete="off">
                 </div>
-                <ul class="suggestions">
+                <ul class="suggestions" id="S6">
                     <li>Filter Course Code</li>
                     <li>Course Name</li>
                 </ul>
             </div>
             <br>
-            <button class="btn" id="loginredirect">Add Courses</button>
+            <button class="btn" id="addcoursebtn">Add Courses</button>
             <button class="btn" onclick="this.form.reset()">Clear</button>
         </form>
        </div>
+   </section> -->
+
+   <section id="courseadd">
+    <div class="heading">
+        <h1 class="align-left slide-in">Let Us Add some Courses</h1>
+    </div>
+    <div class="container">
+        <form action="#" method="POST">
+        <h2>Course 1</h2>
+        <div class="select-box">
+          <div class="options-container">
+
+              <div class="selected">
+                Search Courses
+              </div>
+              <div class="search-box">
+                <input type="text" id="inputFilter" placeholder="Filter By Course Code or Name..." onchange="filterCourses()"/>
+              </div>
+
+            <select class="option" id="one">
+                <option value="">Select a course.... </option>
+
+            </select>
+          </div>
+        </div>
+
+        <h2>Course 2</h2>
+        <div class="select-box">
+          <div class="options-container">
+
+              <div class="selected">
+                Search Courses
+              </div>
+              <div class="search-box">
+                <input type="text" id="inputFilter2" placeholder="Filter By Course Code or Name..." onchange="filterCourses2()"/>
+              </div>
+
+            <select class="option" id="two">
+                <option value="">Select a course.... </option>
+
+            </select>
+          </div>
+        </div>
+
+        <h2>Course 3</h2>
+        <div class="select-box">
+          <div class="options-container">
+
+              <div class="selected">
+                Search Courses
+              </div>
+              <div class="search-box">
+                <input type="text" id="inputFilter3" placeholder="Filter By Course Code or Name..." onchange="filterCourses3()"/>
+              </div>
+
+            <select class="option" id="three">
+                <option value="">Select a course.... </option>
+
+            </select>
+          </div>
+        </div>
+
+        <h2>Course 4</h2>
+        <div class="select-box">
+          <div class="options-container">
+
+              <div class="selected">
+                Search Courses
+              </div>
+              <div class="search-box">
+                <input type="text" id="inputFilter4" placeholder="Filter By Course Code or Name..." onchange="filterCourses4()"/>
+              </div>
+
+            <select class="option" id="four">
+                <option value="">Select a course.... </option>
+
+            </select>
+          </div>
+        </div>
+
+        <h2>Course 5</h2>
+        <div class="select-box">
+          <div class="options-container">
+
+              <div class="selected">
+                Search Courses
+              </div>
+              <div class="search-box">
+                <input type="text" id="inputFilter5" placeholder="Filter By Course Code or Name..." onchange="filterCourses5()"/>
+              </div>
+
+            <select class="option" id="five">
+                <option value="">Select a course.... </option>
+
+            </select>
+          </div>
+        </div>
+
+        <h2>Course 6</h2>
+        <div class="select-box">
+          <div class="options-container">
+
+              <div class="selected">
+                Search Courses
+              </div>
+              <div class="search-box">
+                <input type="text" id="inputFilter6" placeholder="Filter By Course Code or Name..." onchange="filterCourses6()"/>
+              </div>
+
+            <select class="option" id="six">
+                <option value="">Select a course.... </option>
+
+            </select>
+          </div>
+        </div>
+
+        <h2>Course 7</h2>
+        <div class="select-box">
+          <div class="options-container">
+
+              <div class="selected">
+                Search Courses
+              </div>
+              <div class="search-box">
+                <input type="text" id="inputFilter7" placeholder="Filter By Course Code or Name..." onchange="filterCourses7()"/>
+              </div>
+
+            <select class="option" id="seven">
+                <option value="">Select a course.... </option>
+
+            </select>
+          </div>
+        </div>
+
+        <!-- Submit button -->
+        <input type="submit" value="Add Course" class="btn123" /> 
+        <button class="btn123 btn1" onclick="this.form.reset()">Clear</button>
+
+        </form>
+      </div>
+
    </section>
 
+   <section id ="Timetable">
+    <div class="heading">
+        <h1 class="align-left slide-in">Timetable</h1>
+    </div>
+
+    <!-- <div id="timetable">
+        <table class="table">
+            <tr>
+                <td class="ColumnOneDays">THEORY <br/>HOURS</td>
+                <td class="TheoryHours">
+                    08:00 AM <br />to <br />08:50 AM
+                </td>
+                <td class="TheoryHours">
+                    09:00 AM <br />to <br />09:50 AM
+                </td>
+                <td class="TheoryHours">
+                    10:00 AM <br />to <br />10:50 AM
+                </td>
+                <td class="TheoryHours">
+                    11:00 AM <br />to <br />11:50 AM
+                </td>
+                <td class="TheoryHours">
+                    12:00 PM <br />to <br />12:50 PM
+                </td>
+                <td class="TheoryHours"></td>
+                <td width="8px" rowspan="9" class="ColumnOneDays">
+                    <strong>L <br />U <br />N <br />C <br />H</strong>
+                </td>
+                <td class="TheoryHours">
+                    02:00 PM <br />to <br />02:50 PM
+                </td>
+                <td class="TheoryHours">
+                    03:00 PM <br />to <br />03:50 PM
+                </td>
+                <td class="TheoryHours">
+                    04:00 PM <br />to <br />04:50 PM
+                </td>
+                <td class="TheoryHours">
+                    05:00 PM <br />to <br />05:50 PM
+                </td>
+                <td class="TheoryHours">
+                    06:00 PM <br />to <br />06:50 PM
+                </td>
+                <td class="TheoryHours">
+                    07:00 PM <br />to <br />07:50 PM
+                </td>
+            </tr>
+            <tr>
+                <td class="ColumnOneDays">LAB <br />HOURS</td>
+                <td class="LabHours">
+                    08:00 AM <br />to <br />08:45 AM
+                </td>
+                <td class="LabHours">
+                    08:46 AM <br />to <br />09:30 AM
+                </td>
+                <td class="LabHours">
+                    10:00 AM <br />to <br />10:45 AM
+                </td>
+                <td class="LabHours">
+                    10:46 AM <br />to <br />11:30 AM
+                </td>
+                <td class="LabHours">
+                    11:31 AM <br />to <br />12:15 AM
+                </td>
+                <td class="LabHours">
+                    12:16 AM <br />to <br />01:00 PM
+                </td>
+                <td class="LabHours">
+                    02:00 PM <br />to <br />02:45 PM
+                </td>
+                <td class="LabHours">
+                    02:46 PM <br />to <br />03:30 PM
+                </td>
+                <td class="LabHours">
+                    04:00 PM <br />to <br />04:45 PM
+                </td>
+                <td class="LabHours">
+                    04:46 PM <br />to <br />05:30 PM
+                </td>
+                <td class="LabHours">
+                    05:31 PM <br />to <br />06:15 PM
+                </td>
+                <td class="LabHours">
+                    06:16 PM <br />to <br />07:00 PM
+                </td>
+            </tr>
+            <tr>
+                mon,tue,wed,thu,fri,sat,sun
+            </tr>
+        </table> 
+    </div> -->
+
+   </section>
 
     <script src="./MainJS.js"></script>
+    <script src="./course.js"></script>
+    <script src="./course2.js"></script>
+    <script src="./course3.js"></script>
+    <script src="./course4.js"></script>
+    <script src="./course5.js"></script>
+    <script src="./course6.js"></script>
+    <script src="./course7.js"></script>
+
+    
+
 </body>
 </html>

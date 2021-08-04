@@ -161,7 +161,7 @@ input {
     max-width: 400px;
     margin: 50px auto;
 }
-input#Courses {
+input.CoursesBoy {
     margin: 0;
     text-align: center;
     outline: 0;
@@ -210,8 +210,24 @@ input#Courses {
     background: linear-gradient(to top,  #ffffff 0%,#EFEFEF 100%);
 }
 
+/* TIMETABLE Section */
+
+#Timetable h1{
+    color: tomato;
+    padding: 15px;
+    margin-top: 15px;
+    margin-bottom: 30px;
+    text-shadow:0 0 1px rgb(219, 54, 25);
+    text-align: left;
+    font-size: 3rem;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+}
 
 /* Utility Class */
+.hl {
+    background: #ffc600;
+}
 .h-1{
     font-size: 4rem;
     color: var(--primary-color);
@@ -253,10 +269,10 @@ input#Courses {
 .CC{
     float: right;
     padding: 5px 170px 0px 0px;
-    margin: 25px 5px 0px 0px;
+    margin: 15px 5px 0px 0px;
 }
 .btn1{
-    padding: 5px 11px;
+    padding: 13px 11px;
     margin: 5px 0px;
 }
 .btn2{

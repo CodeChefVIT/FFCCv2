@@ -3,7 +3,7 @@ let allCourses = {};
 
 function filterCourses() {
   var filter = document.getElementById("inputFilter").value;
-  result.courses = allCourses.courses.filter(x => x.title.toUpperCase().includes(filter.toUpperCase()))
+  result.courses = allCourses.courses.filter(x => x.code.toUpperCase().includes(filter.toUpperCase()) + x.title.toUpperCase().includes(filter.toUpperCase()))
   let select = document.getElementById("one");
   
   while (select.firstChild) {
@@ -13,7 +13,7 @@ function filterCourses() {
   for (let i = 0; i < result.courses.length; i++){
         let option = document.createElement("option");
         option.value = result.courses[i]._id;
-        option.text = result.courses[i].title;
+        option.text = result.courses[i].code +" "+ " : " + result.courses[i].title + " "+" - " + result.courses[i].type;
         select.appendChild(option);
     }
 }
@@ -35,7 +35,7 @@ async function renderCourses() {
     for (let i = 0; i < result.courses.length; i++){
         let option = document.createElement("option");
         option.value = result.courses[i]._id;
-        option.text = result.courses[i].title;
+        option.text = result.courses[i].code +" "+ " : " + result.courses[i].title + " "+" - " + result.courses[i].type;
         select.appendChild(option);
     }
 }

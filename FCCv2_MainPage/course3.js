@@ -3,7 +3,7 @@ let allCourses3 = {};
 
 function filterCourses3() {
   var filter = document.getElementById("inputFilter3").value;
-  result3.courses = allCourses3.courses.filter(x => x.title.toUpperCase().includes(filter.toUpperCase()))
+  result3.courses = allCourses.courses.filter(x => x.code.toUpperCase().includes(filter.toUpperCase()) + x.title.toUpperCase().includes(filter.toUpperCase()))
   let select = document.getElementById("three");
   
   while (select.firstChild) {
@@ -13,7 +13,7 @@ function filterCourses3() {
   for (let i = 0; i < result3.courses.length; i++){
         let option = document.createElement("option");
         option.value = result3.courses[i]._id;
-        option.text = result3.courses[i].title;
+        option.text = result3.courses[i].code +" "+ " : " + result3.courses[i].title + " "+" - " + result3.courses[i].type;
         select.appendChild(option);
     }
 }
@@ -29,13 +29,13 @@ async function getCourses() {
 }
 
 async function renderCourses() {
-    allCourses3 = await getCourses();
-    result3 = Object.assign({}, allCourses3);
+    allCourses = await getCourses();
+    result3 = Object.assign({}, allCourses);
     let select = document.getElementById("three");
     for (let i = 0; i < result3.courses.length; i++){
         let option = document.createElement("option");
         option.value = result3.courses[i]._id;
-        option.text = result3.courses[i].title;
+        option.text = result3.courses[i].code +" "+ " : " + result3.courses[i].title + " "+" - " + result3.courses[i].type;
         select.appendChild(option);
     }
 }

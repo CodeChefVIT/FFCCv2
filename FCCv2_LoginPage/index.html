@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fully Flexible Credit Companion</title>
     <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="./StyleCourse.css">
+    <!-- <link rel="stylesheet" href="./StyleCourse.css"> -->
+    <link rel="stylesheet" href="./styleCourse2.css">
     <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
 
@@ -23,7 +24,7 @@
                <p>Same experience as FFCS</p>
                <p>Practice making your TimeTable</p>
                <button class="btn"><a href="#addcourse">Get Started</a></button>
-               <img src="../CodeChef-VIT_New_Logo_1.png" alt="" class="CC">
+               <img src="./CodeChef-VIT_New_Logo_1.png" alt="" class="CC">
            </div>
            <div class="home_title">
                <h1 class="h-1">
@@ -43,47 +44,7 @@
        
    </section>
 
-   <!-- <section id="course-container">
-       <div class="course">
-
-           <div class="course-title">
-            <h2>Add Courses To Your TimeTable</h2>
-           </div>
-
-           <div class="course-search">
-            <form action="#" class="forms">
-                <div class="coursecode">
-                    <label for="CourseCode">Course 1:</label>
-                    <div>
-                        <input type="text" name="CourseCode" id="CourseCode" placeholder="Search" autocomplete="off">
-                    </div>
-                    <ul class="suggestions">
-                        <li>Filter Course Code</li>
-                        <li>Course Name</li>
-                    </ul>
-                </div>
-                <div class="coursename">
-                    <label for="CourseName">Course Name:</label>
-                    <div>
-                        <input type="text" name="CourseName" id="CourseName" placeholder="Search" autocomplete="off">
-                    </div>
-                </div>
-                <div class="coursecredit">
-                    <label for="CourseCredit">Course Credits:</label>
-                    <div>
-                        <input type="number" name="CourseCredit" id="CourseCredit" placeholder="Search" autocomplete="off" max="4" min="0">
-                    </div>
-                </div>
-                <div class="coursebuttons">
-                    <button class="btn1">Add Course</button>
-                    <button class="btn2" onclick="this.form.reset()">Clear</button>
-                </div>
-            </form>
-           </div>
-       </div>
-   </section> -->
-
-   <section id= "addcourse">
+   <!-- <section id= "addcourse">
        <div class="heading">
            <h1 class="align-left slide-in">Let Us Add some Courses</h1>
        </div>
@@ -160,6 +121,147 @@
             <button class="btn" onclick="this.form.reset()">Clear</button>
         </form>
        </div>
+   </section> -->
+
+   <section id="courseadd">
+    <div class="heading">
+        <h1 class="align-left slide-in">Let Us Add some Courses</h1>
+    </div>
+    <div class="container">
+        <form action="#" method="POST">
+        <h2>Course 1</h2>
+        <div class="select-box">
+          <div class="options-container">
+
+              <div class="selected">
+                Search Courses
+              </div>
+              <div class="search-box">
+                <input type="text" id="inputFilter" placeholder="Filter By Course Code or Name..." onchange="filterCourses()"/>
+              </div>
+
+            <select class="option" id="one">
+                <option value="">Select a course.... </option>
+
+            </select>
+          </div>
+        </div>
+
+        <h2>Course 2</h2>
+        <div class="select-box">
+          <div class="options-container">
+
+              <div class="selected">
+                Search Courses
+              </div>
+              <div class="search-box">
+                <input type="text" id="inputFilter2" placeholder="Filter By Course Code or Name..." onchange="filterCourses2()"/>
+              </div>
+
+            <select class="option" id="two">
+                <option value="">Select a course.... </option>
+
+            </select>
+          </div>
+        </div>
+
+        <h2>Course 3</h2>
+        <div class="select-box">
+          <div class="options-container">
+
+              <div class="selected">
+                Search Courses
+              </div>
+              <div class="search-box">
+                <input type="text" id="inputFilter3" placeholder="Filter By Course Code or Name..." onchange="filterCourses3()"/>
+              </div>
+
+            <select class="option" id="three">
+                <option value="">Select a course.... </option>
+
+            </select>
+          </div>
+        </div>
+
+        <h2>Course 4</h2>
+        <div class="select-box">
+          <div class="options-container">
+
+              <div class="selected">
+                Search Courses
+              </div>
+              <div class="search-box">
+                <input type="text" id="inputFilter4" placeholder="Filter By Course Code or Name..." onchange="filterCourses4()"/>
+              </div>
+
+            <select class="option" id="four">
+                <option value="">Select a course.... </option>
+
+            </select>
+          </div>
+        </div>
+
+        <h2>Course 5</h2>
+        <div class="select-box">
+          <div class="options-container">
+
+              <div class="selected">
+                Search Courses
+              </div>
+              <div class="search-box">
+                <input type="text" id="inputFilter5" placeholder="Filter By Course Code or Name..." onchange="filterCourses5()"/>
+              </div>
+
+            <select class="option" id="five">
+                <option value="">Select a course.... </option>
+
+            </select>
+          </div>
+        </div>
+
+        <h2>Course 6</h2>
+        <div class="select-box">
+          <div class="options-container">
+
+              <div class="selected">
+                Search Courses
+              </div>
+              <div class="search-box">
+                <input type="text" id="inputFilter6" placeholder="Filter By Course Code or Name..." onchange="filterCourses6()"/>
+              </div>
+
+            <select class="option" id="six">
+                <option value="">Select a course.... </option>
+
+            </select>
+          </div>
+        </div>
+
+        <h2>Course 7</h2>
+        <div class="select-box">
+          <div class="options-container">
+
+              <div class="selected">
+                Search Courses
+              </div>
+              <div class="search-box">
+                <input type="text" id="inputFilter7" placeholder="Filter By Course Code or Name..." onchange="filterCourses7()"/>
+              </div>
+
+            <select class="option" id="seven">
+                <option value="">Select a course.... </option>
+
+            </select>
+          </div>
+        </div>
+
+        <!-- Submit button -->
+        <input type="submit" value="Add Course" class="btn123" /> 
+        <button class="btn123 btn1" onclick="this.form.reset()">Clear</button>
+
+        </form>
+      </div>
+
    </section>
 
    <section id ="Timetable">
@@ -256,86 +358,16 @@
 
    </section>
 
-   <section id="courseadd">
-    <div class="heading">
-        <h1 class="align-left slide-in">Let Us Add some Courses</h1>
-    </div>
-    <div class="container">
-        <form action="#" method="POST">
-        <h2>Course 1</h2>
-        <div class="select-box">
-          <div class="options-container">
-            <!-- <select class="option" id="one">
-                
-            </select> -->
-            <div class="option">
-                <input type="radio" class="radio" id="film" name="category" value="film" />
-                <label for="Course 2">Course 1</label>
-              </div>
-            <div class="option">
-              <input type="radio" class="radio" id="film" name="category" value="film" />
-              <label for="Course 2">Course 2</label>
-            </div>
-            <div class="option">
-              <input type="radio" class="radio" id="science" name="category" value="science" />
-              <label for="Course 3">Course 3</label>
-            </div>
-            <div class="option">
-              <input type="radio" class="radio" id="art" name="category" value="art"/>
-              <label for="Course 4">Course 4</label>
-            </div>
-            <div class="option">
-              <input type="radio" class="radio" id="music" name="category" value="music"/>
-              <label for="Course 5">Course 5</label>
-            </div> 
-            
-          </div>
-          <div class="selected">
-            Select Courses
-          </div>
-          <div class="search-box">
-            <input type="text" placeholder="Search..." />
-          </div>
-        </div>
-
-        <h2>Course 2</h2>
-        <div class="select-box">
-          <div class="options-container">
-            <div class="option">
-              <input
-                type="radio"
-                class="radio"
-                id="youtube"
-                name="platform"
-                value="youtube"
-              />
-              <label for="youtube">YouTube</label>
-            </div>
-            <div class="option">
-              <input type="radio" class="radio" id="facebook" name="platform" value="facebook"/>
-              <label for="facebook">Facebook</label>
-            </div>
-            <div class="option">
-              <input type="radio" class="radio" id="vimeo" name="platform" value="vimeo" />
-              <label for="vimeo">Twitter</label>
-            </div>
-          </div>
-          <div class="selected">
-            Select Courses
-          </div>
-          <div class="search-box">
-            <input type="text" placeholder="Search..." />
-          </div>
-        </div>
-        <input type="submit" value="Add Course" class="btn123" />
-       
-        </form>
-      </div>
-
-   </section>
-
-
     <script src="./MainJS.js"></script>
     <script src="./course.js"></script>
+    <script src="./course2.js"></script>
+    <script src="./course3.js"></script>
+    <script src="./course4.js"></script>
+    <script src="./course5.js"></script>
+    <script src="./course6.js"></script>
+    <script src="./course7.js"></script>
+
+    
+
 </body>
 </html>

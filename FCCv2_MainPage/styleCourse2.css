@@ -52,7 +52,7 @@
 }
 .btn123{
     display: flex;
-    background-color:black;
+    background-color:rgb(32, 30, 30);
     box-shadow: 5px 5px 8px gray;
     color: white;
     font-weight: bold;
@@ -61,5 +61,11 @@
     text-align: center;
     justify-content: center;
     margin: auto;
-
+    cursor: pointer;
+    transition: all 0.2s ease-in;
+}
+.btn123:hover{
+    background-color:rgb(219, 54, 25);
+    color:black;
+    outline: none;
 }

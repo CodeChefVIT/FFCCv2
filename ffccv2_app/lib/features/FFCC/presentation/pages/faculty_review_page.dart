@@ -5,7 +5,7 @@ import 'package:get/route_manager.dart';
 
 class FacultyReviewPage extends StatefulWidget {
   static const String routeName = '/facultyReviewPage';
-  const FacultyReviewPage({Key key}) : super(key: key);
+  const FacultyReviewPage({Key? key}) : super(key: key);
 
   @override
   _FacultyReviewPageState createState() => _FacultyReviewPageState();

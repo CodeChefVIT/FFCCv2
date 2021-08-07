@@ -13,7 +13,7 @@ class TeachersPage extends StatefulWidget {
 
 class _TeachersPageState extends State<TeachersPage> {
   final _formKey = GlobalKey<FormState>();
-  static List<String> friendsList = [null];
+  static List<String?> friendsList = [null];
 
   @override
   Widget build(BuildContext context) {
@@ -85,7 +85,7 @@ class _TeachersPageState extends State<TeachersPage> {
                         fontWeight: FontWeight.w600),
                   ),
                   Container(
-                    height: size.height * .5,
+                    height: size.height * .48,
                     child: ListView(
                       children: [
                         ..._getTeachers(),
@@ -105,8 +105,8 @@ class _TeachersPageState extends State<TeachersPage> {
                         onPressed: () {
                           //Get.toNamed(TimeTablePage.routeName);
                           Get.toNamed(TimeTablePage.routeName);
-                          if (_formKey.currentState.validate()) {
-                            _formKey.currentState.save();
+                          if (_formKey.currentState!.validate()) {
+                            _formKey.currentState!.save();
                           }
                         },
                         child: Text(
@@ -183,7 +183,7 @@ class TeachersTextFields extends StatefulWidget {
 }
 
 class _TeachersTextFieldsState extends State<TeachersTextFields> {
-  TextEditingController _nameController;
+  TextEditingController? _nameController;
 
   @override
   void initState() {
@@ -193,14 +193,14 @@ class _TeachersTextFieldsState extends State<TeachersTextFields> {
 
   @override
   void dispose() {
-    _nameController.dispose();
+    _nameController!.dispose();
     super.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
-    WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
-      _nameController.text = _TeachersPageState.friendsList[widget.index] ?? '';
+    WidgetsBinding.instance!.addPostFrameCallback((timeStamp) {
+      _nameController!.text = _TeachersPageState.friendsList[widget.index] ?? '';
     });
 
     return Padding(
@@ -227,7 +227,7 @@ class _TeachersTextFieldsState extends State<TeachersTextFields> {
         ),
         onChanged: (v) => _TeachersPageState.friendsList[widget.index] = v,
         validator: (v) {
-          if (v.trim().isEmpty) return 'Please enter something';
+          if (v!.trim().isEmpty) return 'Please enter something';
           return null;
         },
       ),

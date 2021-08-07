@@ -6,7 +6,7 @@ import 'package:get/route_manager.dart';
 
 class FacultyReviewSearchPage extends StatefulWidget {
   static const String routeName = '/facultyReviewSearchPage';
-  const FacultyReviewSearchPage({Key key}) : super(key: key);
+  const FacultyReviewSearchPage({Key? key}) : super(key: key);
 
   @override
   _FacultyReviewSearchPageState createState() =>
@@ -69,13 +69,13 @@ class _FacultyReviewSearchPageState extends State<FacultyReviewSearchPage> {
 
 class FacultySearchCard extends StatelessWidget {
   const FacultySearchCard({
-    Key key,
-    @required this.name,
-    @required this.course,
+    Key? key,
+    required this.name,
+    required this.course,
     this.onTap,
   }) : super(key: key);
   final String name, course;
-  final Function onTap;
+  final Function? onTap;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -88,7 +88,7 @@ class FacultySearchCard extends StatelessWidget {
           ),
         ),
         child: GestureDetector(
-          onTap: onTap,
+          onTap: onTap as void Function()?,
           child: Container(
             height: 70,
             child: ListTile(

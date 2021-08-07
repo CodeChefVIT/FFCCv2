@@ -3,8 +3,8 @@ import 'package:get/get.dart';
 
 class SignUpLoginHeader extends StatelessWidget {
   const SignUpLoginHeader({
-    Key key,
-    @required this.label,
+    Key? key,
+    required this.label,
   }) : super(key: key);
   final String label;
   @override

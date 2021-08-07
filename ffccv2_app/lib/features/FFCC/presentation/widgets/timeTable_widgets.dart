@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 class LabHeader extends StatelessWidget {
   const LabHeader({
-    Key key,
+    Key? key,
   }) : super(key: key);
 
   @override
@@ -99,7 +99,7 @@ class LabHeader extends StatelessWidget {
 
 class TheoryHeader extends StatelessWidget {
   const TheoryHeader({
-    Key key,
+    Key? key,
   }) : super(key: key);
 
   @override
@@ -196,10 +196,10 @@ class TheoryHeader extends StatelessWidget {
 
 class WeekDayTT extends StatelessWidget {
   const WeekDayTT({
-    Key key,
+    Key? key,
     this.day,
   }) : super(key: key);
-  final String day;
+  final String? day;
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -235,10 +235,10 @@ class WeekDayTT extends StatelessWidget {
 
 class VerticalCard extends StatelessWidget {
   const VerticalCard({
-    Key key,
+    Key? key,
     this.label,
   }) : super(key: key);
-  final String label;
+  final String? label;
 
   @override
   Widget build(BuildContext context) {
@@ -249,7 +249,7 @@ class VerticalCard extends StatelessWidget {
         color: KColor.ttBlue,
         child: Center(
             child: Text(
-          label,
+          label!,
           textAlign: TextAlign.center,
           style: TextStyle(
             fontWeight: FontWeight.bold,
@@ -262,7 +262,7 @@ class VerticalCard extends StatelessWidget {
 
 class TwoSquareCardColumn extends StatelessWidget {
   const TwoSquareCardColumn({
-    Key key,
+    Key? key,
     this.label1 = '',
     this.label2 = '',
     this.isFirstColumn = false,
@@ -288,13 +288,13 @@ class TwoSquareCardColumn extends StatelessWidget {
 
 class TwoHorizontalH40CardColumn extends StatelessWidget {
   const TwoHorizontalH40CardColumn({
-    Key key,
+    Key? key,
     this.label1 = '',
     this.label2 = '',
     this.color,
   }) : super(key: key);
   final String label1, label2;
-  final Color color;
+  final Color? color;
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -314,12 +314,12 @@ class TwoHorizontalH40CardColumn extends StatelessWidget {
 
 class HorizontalCard extends StatelessWidget {
   const HorizontalCard({
-    Key key,
+    Key? key,
     this.label,
     this.color,
   }) : super(key: key);
-  final String label;
-  final Color color;
+  final String? label;
+  final Color? color;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -329,7 +329,7 @@ class HorizontalCard extends StatelessWidget {
         color: color,
         child: Center(
             child: Text(
-          label,
+          label!,
           style: TextStyle(fontWeight: FontWeight.bold),
         )),
       ),
@@ -339,12 +339,12 @@ class HorizontalCard extends StatelessWidget {
 
 class SquareCard extends StatelessWidget {
   const SquareCard({
-    Key key,
+    Key? key,
     this.label,
     this.color,
   }) : super(key: key);
-  final String label;
-  final Color color;
+  final String? label;
+  final Color? color;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -354,7 +354,7 @@ class SquareCard extends StatelessWidget {
         color: color,
         child: Center(
             child: Text(
-          label,
+          label!,
           style: TextStyle(fontWeight: FontWeight.bold),
         )),
       ),

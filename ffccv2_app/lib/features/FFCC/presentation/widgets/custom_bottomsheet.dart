@@ -3,11 +3,11 @@ import 'package:flutter/material.dart';
 
 class CustomBottomSheet extends StatelessWidget {
   const CustomBottomSheet({
-    Key key,
-    @required this.controller,
+    Key? key,
+    required this.controller,
     this.title,
   }) : super(key: key);
-  final String title;
+  final String? title;
   final TextEditingController controller;
 
   @override
@@ -22,7 +22,7 @@ class CustomBottomSheet extends StatelessWidget {
               height: 40,
               padding: const EdgeInsets.all(5),
               child: Text(
-                title,
+                title!,
                 style: TextStyle(fontSize: 20),
               ),
             ),

@@ -1,0 +1,240 @@
+body {
+    font-family: sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+    border-radius: 4px;
+    /* font-family: 'Nunito', Nunito, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font: small; */
+}
+
+table {
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: separate;
+    border-spacing: 0.2em 0.2em;
+}
+
+
+/* Theory */
+
+.Theory {
+    color: #fff;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 4px;
+    background-color: #744eaa;
+    width: 4em;
+    height: 2em;
+}
+
+
+/* For theory End and start time rows */
+
+.purple {
+    text-align: center;
+    border-radius: 4px;
+    font-size: 12px;
+    background-color: #744eaa;
+    color: white;
+    width: 4em;
+    height: 2em;
+}
+
+
+/* Setting property for End Start */
+
+.blue {
+    background: #909EFF;
+    vertical-align: middle;
+    text-align: center;
+    border-radius: 4px;
+    font-size: 12px;
+    color: white;
+    width: 4em;
+    height: 2em;
+}
+
+
+/* For Lab only */
+
+.Lab {
+    color: #fff;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 4px;
+    background-color: #D5B8FF;
+}
+
+
+/* For Lab End and start time rows */
+
+.Pink1 {
+    text-align: center;
+    border-radius: 4px;
+    font-size: 12px;
+    background-color: #D5B8FF;
+    color: white;
+}
+
+
+/* For days */
+
+.day {
+    text-align: center;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: #D5B8FF;
+    color: white;
+}
+
+
+/* for Theory and lab of days */
+
+.blue1 {
+    color: #fff;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 600;
+    border-radius: 4px;
+    background-color: #744eaa;
+    width: 4em;
+    height: 6em;
+}
+
+
+/* for class slots */
+
+.Slots {
+    color: #fff;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 600;
+    border-radius: 4px;
+    background-color: #ffff;
+    border: 2px solid #E2E2E2;
+    width: 4em;
+    height: 6em;
+}
+
+@media only screen and (max-width: 650px) {
+    table {
+        border-spacing: 0.1em 0.1em;
+    }
+    /* for class slots */
+    .Slots {
+        font-size: 8px;
+    }
+    /* For theory End and start time rows */
+    .purple {
+        font-size: 8px;
+    }
+    /* Theory */
+    .Theory {
+        font-size: 12px;
+        font-weight: normal;
+    }
+    /* For Lab only */
+    .Lab {
+        font-size: 12px;
+        font-weight: normal;
+    }
+    /* for Theory and lab of days */
+    .blue1 {
+        font-size: 8px;
+    }
+    /* Setting property for End Start */
+    .blue {
+        font-size: 8px;
+    }
+    /* For Lab End and start time rows */
+    .Pink1 {
+        font-size: 8px;
+    }
+    /* For days */
+    .day {
+        font-size: 12px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    table {
+        border-spacing: 0.1em 0.1em;
+    }
+    /* for class slots */
+    .Slots {
+        font-size: 6px;
+    }
+    /* For theory End and start time rows */
+    .purple {
+        font-size: 6px;
+    }
+    /* Theory */
+    .Theory {
+        font-size: 10px;
+        font-weight: normal;
+    }
+    /* For Lab only */
+    .Lab {
+        font-size: 10px;
+        font-weight: normal;
+    }
+    /* for Theory and lab of days */
+    .blue1 {
+        font-size: 6px;
+    }
+    /* Setting property for End Start */
+    .blue {
+        font-size: 6px;
+    }
+    /* For Lab End and start time rows */
+    .Pink1 {
+        font-size: 6px;
+    }
+    /* For days */
+    .day {
+        font-size: 10px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    table {
+        border-spacing: 0.1em 0.1em;
+    }
+    /* for class slots */
+    .Slots {
+        font-size: 4px;
+    }
+    /* For theory End and start time rows */
+    .purple {
+        font-size: 4px;
+    }
+    /* Theory */
+    .Theory {
+        font-size: 8px;
+        font-weight: normal;
+    }
+    /* For Lab only */
+    .Lab {
+        font-size: 8px;
+        font-weight: normal;
+    }
+    /* for Theory and lab of days */
+    .blue1 {
+        font-size: 4px;
+    }
+    /* Setting property for End Start */
+    .blue {
+        font-size: 4px;
+    }
+    /* For Lab End and start time rows */
+    .Pink1 {
+        font-size: 4px;
+    }
+    /* For days */
+    .day {
+        font-size: 8px;
+    }
+}

@@ -13,9 +13,10 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  cupertino_icons: ^1.0.2
+  cupertino_icons: null
+  flutter_rating_bar: ^4.0.0
   flutter_svg: ^0.22.0
-  getx_triple: ^0.0.4
+  get: ^4.1.4
   google_fonts: ^2.1.0
 
 dev_dependencies:

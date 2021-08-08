@@ -1,8 +1,13 @@
 import 'package:ffccv2_app/constants/colors.dart';
+import 'package:ffccv2_app/features/FFCC/presentation/pages/facluty_review_search.dart';
+import 'package:ffccv2_app/features/FFCC/presentation/pages/faculty_review_page.dart';
 import 'package:ffccv2_app/features/FFCC/presentation/pages/get_started_page.dart';
+import 'package:ffccv2_app/features/FFCC/presentation/pages/login_page.dart';
+import 'package:ffccv2_app/features/FFCC/presentation/pages/signup_page.dart';
 import 'package:ffccv2_app/features/FFCC/presentation/pages/splash_screen.dart';
 import 'package:ffccv2_app/features/FFCC/presentation/pages/subjects_page.dart';
 import 'package:ffccv2_app/features/FFCC/presentation/pages/teachers_page.dart';
+import 'package:ffccv2_app/features/FFCC/presentation/pages/time_table_page.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:get/get.dart';
@@ -18,10 +23,17 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       getPages: [
+        GetPage(name: GetStartedPage.routeName, page: () => GetStartedPage()),
+        GetPage(name: SubjectPage.routeName, page: () => SubjectPage()),
+        GetPage(name: TeachersPage.routeName, page: () => TeachersPage()),
+        GetPage(name: TimeTablePage.routeName, page: () => TimeTablePage()),
         GetPage(
-            name: GetStartedPage.getStartedPage, page: () => GetStartedPage()),
-        GetPage(name: SubjectPage.subjectsPage, page: () => SubjectPage()),
-        GetPage(name: TeachersPage.teachersPage, page: () => TeachersPage()),
+            name: FacultyReviewSearchPage.routeName,
+            page: () => FacultyReviewSearchPage()),
+        GetPage(
+            name: FacultyReviewPage.routeName, page: () => FacultyReviewPage()),
+        GetPage(name: SignUpPage.routeName, page: () => SignUpPage()),
+        GetPage(name: LoginPage.routeName, page: () => LoginPage()),
       ],
       theme: ThemeData(
           textTheme: GoogleFonts.dmSansTextTheme(

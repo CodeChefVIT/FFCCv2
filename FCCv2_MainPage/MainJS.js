@@ -1,7 +1,7 @@
 //Slide on Scroll JS
 const sliderImages = document.querySelectorAll(".slide-in");
 //Debounce function
-function debounce(func, wait = 20, immediate = true) {
+function debounce(func, wait = 15, immediate = true) {
     var timeout;
     return function() {
       var context = this, args = arguments;

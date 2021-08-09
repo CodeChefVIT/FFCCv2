@@ -5,14 +5,36 @@
 }
 body{
     background: #fcfcfc;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 html{
     scroll-behavior: smooth;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 :root{
     --primary-color:#122CEC;
     --secondary-color:#909EFF;
 }
+/* ScrollBar */
+::-webkit-scrollbar{
+    width: 11px;
+    cursor: pointer;
+}
+::-webkit-scrollbar-track{
+    border-radius: 5px;
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.25);
+    background-color: #D5B8FF;
+}
+::-webkit-scrollbar-thumb{
+    border-radius: 5px;
+    background-color:#122CEC;
+}
+::-webkit-scrollbar-thumb:hover{
+
+}
+
 /*Home*/
 #home{
     display: flex;
@@ -171,8 +193,9 @@ footer{
 .footer-content p{
     max-width: 500px;
     margin: 10px auto;
-    line-height: 20px;
-    font-size: 16px;
+    padding-top: 10px;
+    line-height: 40px;
+    font-size: 2rem;
 }
 .socials{
     list-style: none;

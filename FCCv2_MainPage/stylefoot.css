@@ -1,0 +1,266 @@
+body {
+    font-family: 'DM Sans', sans-serif;
+}
+
+.footer {
+    width: 100%;
+    background: #111;
+    height: auto;
+    margin-top: 0px;
+    display: flex;
+    flex-direction: column;
+}
+
+img.logo {
+    margin-left: 9%;
+    align-self: flex-start;
+    margin-top: 40px;
+    width: 114px;
+    height: auto;
+}
+
+p.footerp {
+    color: white;
+    margin-left: 9%;
+    font-size: 64px;
+    margin-top: 32px;
+    margin-bottom: 0px;
+    font-weight: 700;
+}
+
+img.ffcc {
+    margin-left: 9%;
+    width: 239px;
+    height: 74px;
+    margin-top: 16px;
+}
+
+hr {
+    margin-top: 32px;
+    height: 0px;
+    background: white;
+    color: white;
+    width: 80%;
+    border-radius: 8px;
+    margin-bottom: 0px;
+    align-self: center;
+}
+
+.below {
+    margin-top: 24px;
+    display: flex;
+    margin-left: 11%;
+    justify-content: space-between;
+    margin-right: 11%;
+    margin-bottom: 24px;
+}
+
+span {
+    color: white;
+    font-size: 16px;
+}
+
+img.heart {
+    padding: 0 4px 0 4px;
+}
+
+.right {
+    display: flex;
+    justify-content: space-between;
+    width: 21.6%
+}
+
+.icons {
+    width: 24px;
+    height: auto;
+}
+
+@media screen and (max-width: 1200px) {
+    .icons {
+        width: 20px;
+    }
+}
+
+@media screen and (max-width: 930px) {
+    .right {
+        width: 24%;
+    }
+    .icons {
+        width: 16px;
+    }
+    span {
+        font-size: 12px;
+    }
+    .Copyright {
+        width: 10px;
+    }
+    .heart {
+        width: 14px;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .right {
+        width: 27%;
+    }
+    .icons {
+        width: 16px;
+    }
+    span {
+        font-size: 10px;
+    }
+    .Copyright {
+        width: 8px;
+    }
+    .heart {
+        width: 12px;
+    }
+    h1 {
+        font-size: 56px;
+    }
+    img.ffcc {
+        width: 231px;
+        height: 66px;
+    }
+    img.logo {
+        width: 106px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .right {
+        width: 30%;
+    }
+    .icons {
+        width: 16px;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .right {
+        width: 35%;
+    }
+    .icons {
+        width: 14px;
+    }
+    span {
+        font-size: 8px;
+    }
+    .Copyright {
+        width: 8px;
+    }
+    .heart {
+        width: 12px;
+    }
+    h1 {
+        font-size: 48px;
+    }
+    img.ffcc {
+        width: 215px;
+        height: 50px;
+    }
+    img.logo {
+        width: 98px;
+    }
+    .heart {
+        width: 10px;
+        padding: 0 0px 0 0px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .right {
+        width: 100%;
+    }
+    .icons {
+        width: 16px;
+    }
+    span {
+        font-size: 12px;
+    }
+    .Copyright {
+        width: 10px;
+    }
+    .heart {
+        width: 12px;
+    }
+    h1 {
+        font-size: 40px;
+    }
+    img.ffcc {
+        width: 207px;
+        height: 42px;
+    }
+    img.logo {
+        width: 90px;
+    }
+    .heart {
+        width: 10px;
+        padding: 0 0px 0 0px;
+    }
+    .below {
+        flex-direction: column;
+        column-gap: 16px;
+        align-self: center;
+        justify-content: space-between;
+        height: 48px;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .right {
+        width: 100%;
+    }
+    .icons {
+        width: 14px;
+        height: auto;
+    }
+    span {
+        font-size: 10px;
+    }
+    .Copyright {
+        width: 8px;
+    }
+    .heart {
+        width: 12px;
+    }
+    h1 {
+        font-size: 32px;
+    }
+    img.ffcc {
+        width: 199px;
+        height: 34px;
+    }
+    img.logo {
+        width: 82px;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .right {
+        width: 100%;
+    }
+    .icons {
+        width: 12px;
+        height: auto;
+    }
+    span {
+        font-size: 8px;
+    }
+    .Copyright {
+        width: 6px;
+    }
+    .heart {
+        width: 12px;
+    }
+    h1 {
+        font-size: 24px;
+    }
+    img.ffcc {
+        width: 191px;
+        height: 26px;
+    }
+    img.logo {
+        width: 74px;
+    }
+}

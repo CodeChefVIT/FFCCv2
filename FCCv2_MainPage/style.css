@@ -196,6 +196,10 @@ footer{
     padding-top: 10px;
     line-height: 40px;
     font-size: 2rem;
+    color: aqua;
+}
+.ffcclogo{
+    transform: scale(0.8);
 }
 .socials{
     list-style: none;

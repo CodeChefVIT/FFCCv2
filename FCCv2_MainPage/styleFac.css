@@ -1,0 +1,11 @@
+#facultyReview h1{
+    color: tomato;
+    padding: 15px;
+    margin-top: 15px;
+    margin-bottom: 30px;
+    text-shadow:0 0 1px rgb(219, 54, 25);
+    text-align: left;
+    font-size: 3rem;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+}

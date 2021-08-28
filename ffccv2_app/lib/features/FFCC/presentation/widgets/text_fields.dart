@@ -1,24 +1,36 @@
 import 'package:ffccv2_app/constants/colors.dart';
 import 'package:flutter/material.dart';
 
-class CustomTextField extends StatelessWidget {
+class CustomTextField extends StatefulWidget {
   const CustomTextField({
-    Key key,
+    Key? key,
     this.label,
     this.hint,
     this.isPassword = false,
+    this.controller,
+    this.isEmail = false,
   }) : super(key: key);
-  final String label, hint;
-  final bool isPassword;
+  final String? label, hint;
+  final bool isPassword, isEmail;
+  final TextEditingController? controller;
+
+  @override
+  _CustomTextFieldState createState() => _CustomTextFieldState();
+}
+
+class _CustomTextFieldState extends State<CustomTextField> {
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(15.0),
       child: TextFormField(
-        obscureText: isPassword,
+        controller: widget.controller,
+        keyboardType:
+            widget.isEmail ? TextInputType.emailAddress : TextInputType.text,
+        obscureText: widget.isPassword,
         decoration: InputDecoration(
-          labelText: label,
-          hintText: hint,
+          labelText: widget.label,
+          hintText: widget.hint,
           labelStyle: TextStyle(color: Colors.black, fontSize: 20),
           floatingLabelBehavior: FloatingLabelBehavior.always,
           filled: true,

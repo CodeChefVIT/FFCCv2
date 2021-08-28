@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'dart:math' as math;
 
 class SemiCirclePainter extends CustomPainter {
-  final Color color;
+  final Color? color;
 
   const SemiCirclePainter({this.color});
 
@@ -10,7 +10,7 @@ class SemiCirclePainter extends CustomPainter {
   void paint(Canvas canvas, Size size) {
     final radius = math.min(size.height, size.width);
     final offset = Offset(size.width - size.width / 2, size.height);
-    canvas.drawCircle(offset, radius, Paint()..color = color);
+    canvas.drawCircle(offset, radius, Paint()..color = color!);
   }
 
   @override

@@ -2,10 +2,10 @@ import 'package:ffccv2_app/constants/colors.dart';
 import 'package:flutter/material.dart';
 
 class BottomSheetTextFieldTile extends StatelessWidget {
-  final int index;
+  final int? index;
   const BottomSheetTextFieldTile({
-    Key key,
-    @required this.size,
+    Key? key,
+    required this.size,
     this.index,
   }) : super(key: key);
 
@@ -27,7 +27,7 @@ class BottomSheetTextFieldTile extends StatelessWidget {
             Container(
               width: 20,
               child: Text(
-                (index + 1).toString() + '.',
+                (index! + 1).toString() + '.',
                 style: TextStyle(fontSize: 18, fontWeight: FontWeight.w700),
               ),
             ),

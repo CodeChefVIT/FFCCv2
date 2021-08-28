@@ -18,7 +18,7 @@ class _SubjectPageState extends State<SubjectPage> {
   }
 
   final _formKey = GlobalKey<FormState>();
-  static List<String> friendsList = [null];
+  static List<String?> friendsList = [null];
 
   @override
   void dispose() {
@@ -97,7 +97,7 @@ class _SubjectPageState extends State<SubjectPage> {
                           fontWeight: FontWeight.w600),
                     ),
                     Container(
-                      height: size.height * .5,
+                      height: size.height * .48,
                       child: ListView(
                         children: [
                           ..._getSubjects(),
@@ -117,8 +117,8 @@ class _SubjectPageState extends State<SubjectPage> {
                           onPressed: () {
                             print(friendsList);
                             Get.toNamed(TeachersPage.routeName);
-                            if (_formKey.currentState.validate()) {
-                              _formKey.currentState.save();
+                            if (_formKey.currentState!.validate()) {
+                              _formKey.currentState!.save();
                             }
                           },
                           child: Text(
@@ -130,6 +130,9 @@ class _SubjectPageState extends State<SubjectPage> {
                           ),
                         ),
                       ),
+                    ),
+                    SizedBox(
+                      height: 20,
                     )
                   ],
                 ),
@@ -196,7 +199,7 @@ class SubjectsTextFields extends StatefulWidget {
 }
 
 class _SubjectsTextFieldsState extends State<SubjectsTextFields> {
-  TextEditingController _nameController;
+  TextEditingController? _nameController;
 
   @override
   void initState() {
@@ -206,14 +209,14 @@ class _SubjectsTextFieldsState extends State<SubjectsTextFields> {
 
   @override
   void dispose() {
-    _nameController.dispose();
+    _nameController!.dispose();
     super.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
-    WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
-      _nameController.text = _SubjectPageState.friendsList[widget.index] ?? '';
+    WidgetsBinding.instance!.addPostFrameCallback((timeStamp) {
+      _nameController!.text = _SubjectPageState.friendsList[widget.index] ?? '';
     });
 
     return Padding(
@@ -240,7 +243,7 @@ class _SubjectsTextFieldsState extends State<SubjectsTextFields> {
         ),
         onChanged: (v) => _SubjectPageState.friendsList[widget.index] = v,
         validator: (v) {
-          if (v.trim().isEmpty) return 'Please enter something';
+          if (v!.trim().isEmpty) return 'Please enter something';
           return null;
         },
       ),

@@ -64,7 +64,7 @@ class _GetStartedPageState extends State<GetStartedPage> {
           Positioned(
             left: 50,
             right: 50,
-            top: size.height * .67,
+            top: size.height * .6,
             child: Container(
               child: Column(
                 children: [

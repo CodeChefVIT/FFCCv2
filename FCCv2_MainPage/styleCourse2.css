@@ -1,16 +1,17 @@
-#courseadd h1{
-    color: tomato;
-    padding: 15px;
-    margin-top: 15px;
+#courseadd h1 {
+    color: white;
+    padding: 60px 0px 80px 80px;
+    margin-top: 0px;
     margin-bottom: 30px;
-    text-shadow:0 0 1px rgb(219, 54, 25);
+    /* text-shadow: 0 0 1px rgb(219, 54, 25); */
     text-align: left;
-    font-size: 3rem;
+    font-size: 4rem;
     font-weight: bold;
     font-family: 'Poppins', sans-serif;
 }
-.option{
-    width:600px;
+
+.option {
+    width: 600px;
     min-height: 45px;
     background: #cbe7ff;
     border-radius: 3px;
@@ -18,32 +19,47 @@
     /* box-shadow: 0px 5px 25px rgba(0,0,0,0.5); */
     outline: none;
 }
-.option option{
+
+.option option {
     font-size: 14px;
     line-height: 20px;
-    font-family:'Poppins', sans-serif;
+    font-family: 'Poppins', sans-serif;
     text-align: center;
 }
-.option option.text{
+
+.option option.text {
     font-size: 16px;
 }
-.container h2{
+
+.container h2 {
     font-size: 2.3rem;
-    font-weight: bold;
+    font-weight: 400;
     font-family: 'Poppins', sans-serif;
     margin-top: 10px;
-    padding: 10px;
-    color:#909EFF;
+    padding: 50px 0px 0px 260px;
+    color: rgba(255, 255, 255, 0.863);
 }
-.select-box{
+
+h2.course1 {
+    font-size: 2.3rem;
+    font-weight: 400;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 0px;
+    padding: 0px 0px 0px 260px;
+    color: rgba(255, 255, 255, 0.863);
+}
+
+.select-box {
     /* margin:0px; */
     padding: 10px;
 }
-.options-container{
-    padding:5px 0px 0px 250px;
+
+.options-container {
+    padding: 5px 0px 0px 250px;
     margin: 5px;
 }
-.selected{
+
+.selected {
     font-size: 1.25rem;
     font-weight: 600px;
     font-family: 'Poppins', sans-serif;
@@ -51,32 +67,63 @@
     margin: 10px;
     padding: 5px;
 }
-.search-box input{
-    width:600px;
-    margin-bottom:10px;
+
+.search-box input {
+    width: 600px;
+    margin-bottom: 10px;
     padding: 5px;
     min-height: 35px;
     border-radius: 5px;
-    border:2px solid #122CEC;
+    border: 2px solid rgba(0, 0, 0, 0.171);
     outline: none;
 }
-.btn123{
+
+div.button {
     display: flex;
-    background-color:rgb(32, 30, 30);
-    box-shadow: 5px 5px 8px gray;
-    color: white;
+    justify-content: space-between;
+}
+
+.btn123 {
+    background-color: white;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.356);
+    color: black;
     font-weight: bold;
     width: 175px;
     border-radius: 20px;
     text-align: center;
-    justify-content: center;
-    margin: 12px auto;
+    margin: 48px 72px 48px auto;
     cursor: pointer;
     transition: all 0.2s ease-in;
 }
-.btn123:hover{
-    background-color:rgb(219, 54, 25);
+
+input[value="Add Course"] {
+    font-size: 1rem;
+}
+
+.btn123:hover {
+    background-color: var(--primary-color);
     font-size: 14px;
-    color:azure;
+    color: azure;
+    outline: none;
+}
+
+.btn1 {
+    background-color: white;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.356);
+    color: black;
+    font-size: 1rem;
+    font-weight: bold;
+    width: 175px;
+    border-radius: 20px;
+    text-align: center;
+    margin: 48px auto 48px 0px;
+    cursor: pointer;
+    transition: all 0.2s ease-in;
+}
+
+.btn1:hover {
+    background-color: var(--primary-color);
+    font-size: 14px;
+    color: azure;
     outline: none;
 }

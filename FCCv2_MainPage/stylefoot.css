@@ -1,0 +1,90 @@
+/* Footer Class  */
+
+#footer {
+    background: #111;
+    height: auto;
+    width: 100vw;
+    font-family: 'Poppins', sans-serif;
+    padding-top: 30px;
+    color: #fff;
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.footer-content h3 {
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 3rem;
+}
+
+.footer-content p {
+    max-width: 500px;
+    margin: 32px auto 16px auto;
+    padding-top: 10px;
+    line-height: 32px;
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+}
+
+.ffcclogo {
+    transform: scale(0.8);
+}
+
+.socials {
+    margin-left: auto;
+    margin-right: auto;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    justify-content: center;
+    padding: 15px;
+}
+
+.socials li {
+    margin: 1rem 2rem 1rem 2rem;
+}
+
+.socials a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.623);
+}
+
+.socials a i {
+    font-size: 2rem;
+    transition: color .4s ease;
+}
+
+.socials a:hover i {
+    color: var(--primary-color);
+}
+
+.footer-bottom {
+    background: #000;
+    width: 100vw;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-bottom p {
+    font-size: 16px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+}
+
+.footer-bottom span {
+    text-transform: uppercase;
+    font-weight: 200;
+    color: var(--primary-color);
+}
+
+.footer-bottom a {
+    text-decoration: none;
+}

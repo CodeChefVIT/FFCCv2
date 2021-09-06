@@ -1,0 +1,280 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(106.26deg, #0375BE 0%, #192B64 99.48%);
+    background-size: cover;
+    /* border: 2px solid red; */
+    overflow-x: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+:root {
+    --primary-color: #122CEC;
+    --secondary-color: #909EFF;
+}
+
+
+/*Home*/
+
+nav:before {
+    content: '';
+    background-image: url("/img/eliott-reyna-jCEpN62oWL4-unsplash.jpg");
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    top: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* border: 2px solid red; */
+}
+
+nav:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.705);
+    z-index: -1;
+    /* border: 2px solid red; */
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* border: 2px solid red; */
+}
+
+nav img {
+    width: 6%;
+    height: auto;
+    margin-left: 7%;
+    margin-top: 16px;
+    /* border: 2px solid red; */
+}
+
+ul {
+    margin-right: 8%;
+    display: flex;
+}
+
+nav li {
+    list-style: none;
+    display: inline-block;
+    padding: 0 64px 0 24px;
+}
+
+nav li a {
+    text-decoration: none;
+    font-size: 16px;
+    color: white;
+}
+
+#home {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 0px;
+    height: 85vh;
+    /* border: 2px solid blue; */
+}
+
+
+/* #home::before{
+    content: "";
+    background: -webkit-linear-gradient(45deg, whitesmoke, var(--secondary-color));
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 80%;
+    z-index: -1;
+} */
+
+.homepage {
+    width: 100%;
+    height: 100%;
+}
+
+.home_text {
+    float: left;
+    margin-top: 200px;
+    padding: 0px 80px 0px 80px;
+}
+
+.home_text span.text {
+    font-size: 2rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    color: #DBEEFF;
+    padding-top: 4px;
+    padding-left: 120px;
+    display: block;
+}
+
+.home_title {
+    float: right;
+    margin: 180px 80px 0px 0px;
+    /* border: 2px solid red; */
+}
+
+.home_title img {
+    width: 448px;
+    /* border: 2px solid red; */
+}
+
+
+/*AddCourse Section*/
+
+#addcourse h1 {
+    color: tomato;
+    padding: 15px;
+    margin-top: 15px;
+    margin-bottom: 30px;
+    text-shadow: 0 0 1px red;
+    text-align: left;
+    font-size: 3rem;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+}
+
+input {
+    width: 100%;
+    padding: 15px;
+}
+
+.search-form {
+    max-width: 400px;
+    margin: 50px auto;
+}
+
+
+/* TIMETABLE Section */
+
+#Timetable h1 {
+    color: white;
+    padding: 60px 0px 80px 80px;
+    margin-top: 0px;
+    margin-bottom: 30px;
+    /* text-shadow: 0 0 1px rgb(219, 54, 25); */
+    text-align: left;
+    font-size: 4rem;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/* Utility Class */
+
+.hl {
+    background: #ffc600;
+}
+
+.h-1 {
+    font-size: 4rem;
+    color: var(--primary-color);
+    font-family: 'Epilogue', sans-serif;
+    font-weight: bold;
+}
+
+.h-2 {
+    font-size: 4rem;
+    color: var(--secondary-color);
+    font-family: 'Epilogue', sans-serif;
+    font-weight: bold;
+}
+
+.btn {
+    display: block;
+    padding: 10px 30px;
+    margin: 80px 0px 0px 270px;
+    background-color: white;
+    color: whitesmoke;
+    border-radius: 20px;
+    outline: none;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+}
+
+.btn:hover>a {
+    background-color: var(--primary-color);
+    color: white;
+    outline: none;
+}
+
+.btn:hover {
+    background-color: var(--primary-color);
+    outline: none;
+}
+
+.btn a {
+    text-decoration: none;
+    color: black;
+    font-size: 1rem;
+    outline: none;
+}
+
+.CC {
+    float: right;
+    padding: 5px 170px 0px 0px;
+    margin: 15px 5px 0px 0px;
+}
+
+.btn2 {
+    padding: 5px 34px;
+    margin: 5px 0px;
+}
+
+
+/* SlideOnScroll CSS */
+
+.slide-in {
+    /*Hides the image*/
+    opacity: 0;
+    transition: all .5s;
+}
+
+.align-left.slide-in {
+    /*Moves the image out of the screen*/
+    transform: translateX(-90%) scale(0.95);
+}
+
+.slide-in.active {
+    /*Makes the image visible and back to their original space*/
+    opacity: 1;
+    transform: translateX(0%) scale(1);
+}
+
+
+/* Scroll to top CSS */
+
+.scroll-to-top {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    font-size: 30px;
+    color: white;
+    background-color: rgba(80, 140, 252, 0.842);
+    opacity: 90%;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out
+}
+
+.scroll-to-top:hover {
+    transform: translateY(-10%);
+}

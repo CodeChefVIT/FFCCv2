@@ -6,39 +6,55 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fully Flexible Credit Companion</title>
-    <link rel="stylesheet" href="./style.css">
+
     <!-- <link rel="stylesheet" href="./StyleCourse.css"> -->
     <link rel="stylesheet" href="./styleCourse2.css">
     <link rel="stylesheet" href="./stylett.css">
     <link rel="stylesheet" href="./styleFac.css">
+    <link rel="stylesheet" href="./stylefoot.css">
+    <!-- <link rel="stylesheet" href="./style.css"> -->
+    <link rel="stylesheet" href="./stylenew.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.google.com/specimen/Nunito">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 
+
 </head>
 
 <body>
+    <nav>
+        <img src="/img/CodeChef-VIT New Logo 1.svg" alt="Codechef logo">
+        <ul>
+            <li><a href="#courseadd">Courses</a></li>
+            <li><a href="#footer">Contact us</a></li>
+            <li><a href="https://www.codechefvit.com">Visit us</a></li>
+        </ul>
+    </nav>
+
+
+
+
     <section id="home">
         <div class="homepage">
 
-            <div class="imageOverlap">
+            <!-- <div class="imageOverlap">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
                     <path fill="#122CEC" fill-opacity="1"
                         d="M0,128L48,144C96,160,192,192,288,186.7C384,181,480,139,576,133.3C672,128,768,160,864,170.7C960,181,1056,171,1152,149.3C1248,128,1344,96,1392,80L1440,64L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z">
                     </path>
                 </svg>
-            </div>
+            </div> -->
 
             <div class="home_text">
-                <p>Same experience as FFCS</p>
-                <p>Practice making your TimeTable</p>
+                <span class="text">Same experience as FFCS</span>
+                <span class="text">Practice making your TimeTable</span>
                 <button class="btn"><a href="#courseadd">Get Started</a></button>
-                <img src="./CodeChef-VIT_New_Logo_1.png" alt="CC Logo" class="CC">
+                <!-- <img src="./CodeChef-VIT_New_Logo_1.png" alt="CC Logo" class="CC"> -->
             </div>
             <div class="home_title">
-                <h1 class="h-1">
+                <!-- <h1 class="h-1">
                     FULLY
                 </h1>
                 <h1 class="h-2">
@@ -49,7 +65,8 @@
                 </h1>
                 <h1 class="h-2">
                     COMPANION
-                </h1>
+                </h1> -->
+                <img src="/img/FFCCv2 logo.svg" alt="">
             </div>
         </div>
 
@@ -57,20 +74,19 @@
 
     <section id="courseadd">
         <div class="heading">
-            <h1 class="align-left slide-in">Let Us Add some Courses</h1>
+            <h1 class="align-left slide-in">Add courses</h1>
         </div>
         <div class="container">
             <form action="#" method="POST">
-                <h2>Course 1</h2>
+                <h2 class="course1">Course 1</h2>
                 <div class="select-box">
                     <div class="options-container">
 
-                        <div class="selected">
+                        <!-- <div class="selected">
                             Search Courses
-                        </div>
+                        </div> -->
                         <div class="search-box">
-                            <input type="text" id="inputFilter" placeholder="Filter By Course Code or Name..."
-                                onchange="filterCourses()" />
+                            <input type="text" id="inputFilter" placeholder="Filter By Course Code or Name..." onchange="filterCourses()" />
                         </div>
 
                         <select class="option" id="one">
@@ -84,12 +100,11 @@
                 <div class="select-box">
                     <div class="options-container">
 
-                        <div class="selected">
+                        <!-- <div class="selected">
                             Search Courses
-                        </div>
+                        </div> -->
                         <div class="search-box">
-                            <input type="text" id="inputFilter2" placeholder="Filter By Course Code or Name..."
-                                onchange="filterCourses2()" />
+                            <input type="text" id="inputFilter2" placeholder="Filter By Course Code or Name..." onchange="filterCourses2()" />
                         </div>
 
                         <select class="option" id="two">
@@ -103,12 +118,11 @@
                 <div class="select-box">
                     <div class="options-container">
 
-                        <div class="selected">
+                        <!-- <div class="selected">
                             Search Courses
-                        </div>
+                        </div> -->
                         <div class="search-box">
-                            <input type="text" id="inputFilter3" placeholder="Filter By Course Code or Name..."
-                                onchange="filterCourses3()" />
+                            <input type="text" id="inputFilter3" placeholder="Filter By Course Code or Name..." onchange="filterCourses3()" />
                         </div>
 
                         <select class="option" id="three">
@@ -122,12 +136,11 @@
                 <div class="select-box">
                     <div class="options-container">
 
-                        <div class="selected">
+                        <!-- <div class="selected">
                             Search Courses
-                        </div>
+                        </div> -->
                         <div class="search-box">
-                            <input type="text" id="inputFilter4" placeholder="Filter By Course Code or Name..."
-                                onchange="filterCourses4()" />
+                            <input type="text" id="inputFilter4" placeholder="Filter By Course Code or Name..." onchange="filterCourses4()" />
                         </div>
 
                         <select class="option" id="four">
@@ -141,12 +154,11 @@
                 <div class="select-box">
                     <div class="options-container">
 
-                        <div class="selected">
+                        <!-- <div class="selected">
                             Search Courses
-                        </div>
+                        </div> -->
                         <div class="search-box">
-                            <input type="text" id="inputFilter5" placeholder="Filter By Course Code or Name..."
-                                onchange="filterCourses5()" />
+                            <input type="text" id="inputFilter5" placeholder="Filter By Course Code or Name..." onchange="filterCourses5()" />
                         </div>
 
                         <select class="option" id="five">
@@ -159,13 +171,12 @@
                 <h2>Course 6</h2>
                 <div class="select-box">
                     <div class="options-container">
-
+                        <!-- 
                         <div class="selected">
                             Search Courses
-                        </div>
+                        </div> -->
                         <div class="search-box">
-                            <input type="text" id="inputFilter6" placeholder="Filter By Course Code or Name..."
-                                onchange="filterCourses6()" />
+                            <input type="text" id="inputFilter6" placeholder="Filter By Course Code or Name..." onchange="filterCourses6()" />
                         </div>
 
                         <select class="option" id="six">
@@ -179,12 +190,11 @@
                 <div class="select-box">
                     <div class="options-container">
 
-                        <div class="selected">
+                        <!-- <div class="selected">
                             Search Courses
-                        </div>
+                        </div> -->
                         <div class="search-box">
-                            <input type="text" id="inputFilter7" placeholder="Filter By Course Code or Name..."
-                                onchange="filterCourses7()" />
+                            <input type="text" id="inputFilter7" placeholder="Filter By Course Code or Name..." onchange="filterCourses7()" />
                         </div>
 
                         <select class="option" id="seven">
@@ -193,11 +203,11 @@
                         </select>
                     </div>
                 </div>
-
                 <!-- Submit button -->
-                <input type="submit" value="Add Course" class="btn123" />
-                <button class="btn123 btn1" onclick="this.form.reset()">Clear</button>
-
+                <div class="button">
+                    <input type="submit" value="Add Course" class="btn123" />
+                    <button class="  btn1" onclick="this.form.reset()"> <span>Clear</span> </button>
+                </div>
             </form>
         </div>
 
@@ -644,7 +654,7 @@
     <button class="scroll-to-top"><i class="fa fa-chevron-up"></button>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer id="footer">
         <div class="footer-content">
             <img class="ffcclogo" src="/img/FFCCv2.svg" alt="FFCC">
             <p>Automate your Timetable with us!</p>
@@ -658,13 +668,14 @@
             </ul>
         </div>
         <div class="footer-bottom">
-            <p> &copy; Copyright 2021 | With <span style="color: aqua; font-weight: 700">💙</span> by
+            <p> &copy; Copyright 2021 | With <span style="color: blue; font-weight: 700">💙</span> by
                 <a href="http://www.codechefvit.com" target="_blank">
-                  <span>CodeChef-VIT</span>
+                    <span>CodeChef-VIT</span>
                 </a>
-              </p>
+            </p>
         </div>
-    </footer>   
+    </footer>
+
 
     <script src="./MainJS.js"></script>
     <script src="./course.js"></script>
